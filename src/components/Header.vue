@@ -25,9 +25,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#hb-experience">Professional Experiences</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="#hb-portfolio">My Portfolio</a>
-                            </li>                               
+                            </li>                                -->
                             <li class="nav-item">
                                <a class="nav-link" href="#hb-contact">Contact Me</a>
                             </li>
