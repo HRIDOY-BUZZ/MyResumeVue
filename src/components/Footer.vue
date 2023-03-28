@@ -7,7 +7,7 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="text-left text-xs-center">
-                                    <p>Copyright <i class="far fa-copyright"></i> 2023 <a href="#"> Al-Amin Islam Hridoy</a></p>
+                                    <p>Copyright <i class="far fa-copyright"></i> {{ year }} <a href="#"> Al-Amin Islam Hridoy</a></p>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -25,3 +25,13 @@
         </div>
     </footer>
 </template>
+
+<script>
+    import { ref } from 'vue'
+    export default {
+        setup() {
+        const year = ref(new Date().getFullYear())
+        return { year }
+        }
+    }
+</script>
