@@ -114,15 +114,6 @@ main{
     min-height: 80vh;
 }
 
-#app.loaded header,
-#app.loaded body,
-#app.loaded footer {
-    display: block;
-}
-
-#app.loaded .preloader {
-    display: none;
-}
 
 h1,
 h2,
