@@ -1,5 +1,5 @@
 <template>
-    <section class="hb-about" id="hb-about">
+    <main class="hb-about section-separator" id="hb-about">
             <div class="container">
                 <div class="row section-separator">
                     <div class="col-sm-12 col-md-6">
@@ -39,5 +39,5 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </main>
 </template>

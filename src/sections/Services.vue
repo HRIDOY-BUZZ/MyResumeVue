@@ -1,5 +1,5 @@
 <template>
-    <section class="hb-service">
+    <main class="hb-service">
             <div class="container">
                 <div class="row section-separator">
                     <div class="col-sm-12 text-center section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </main>
 </template>
 
 <style scoped>

@@ -1,5 +1,5 @@
 <template>
-    <section class="hb-skills" id="hb-skills">
+    <main class="hb-skills" id="hb-skills">
             <div class="container">
             <h1 class="wow fadeInUp text-center" data-wow-duration="0.8s" data-wow-delay="0.1s">Skills and Interests</h1>
                 <div class="row section-separator">
@@ -352,5 +352,5 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </main>
 </template>

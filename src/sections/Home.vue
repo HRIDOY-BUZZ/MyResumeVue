@@ -1,5 +1,5 @@
 <template>
-    <section class="hb-home" id="hb-home">
+    <main class="hb-home" id="hb-home">
         <div class="home-ovimg">
             <div class="container">
                 <div class="row xs-column-reverse section-separator vertical-middle-content home-padding">
@@ -36,5 +36,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 </template>

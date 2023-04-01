@@ -1,5 +1,5 @@
 <template>
-    <section class="hb-experince" id="hb-education">
+    <main class="hb-experince" id="hb-education">
             <div class="bolor-overlay">
                 <div class="container section-separator">
                     <h1 class="text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
@@ -54,5 +54,5 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </main>
 </template>
