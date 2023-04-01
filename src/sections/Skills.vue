@@ -1,6 +1,6 @@
 <template>
     <main class="hb-skills" id="hb-skills">
-            <div class="container">
+            <div class="container section-separator">
             <h1 class="wow fadeInUp text-center" data-wow-duration="0.8s" data-wow-delay="0.1s">Skills and Interests</h1>
                 <div class="row section-separator">
                     <div class="section-title text-center col-sm-12">
