@@ -273,19 +273,63 @@
                         <div class="hb-professional-skills wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
                             <ul class="hb-professional-progress" >
                                 <li>
-                                    <div class="hb-progress hb-progress-circle" data-progress="95"></div>
+                                    <circle-progress
+                                    :size="100" 
+                                    :percent="96" 
+                                    :fill-color="'#0bceaf'" 
+                                    :empty-color="'#333333'"
+                                    :border-width="6"
+                                    :border-bg-width="6"
+                                    :transition="1000"
+                                    :show-percent="true"
+                                    :viewport="true"
+                                    :class="'hb-progress hb-progress-circle'">
+                                    </circle-progress>
                                     <div class="pr-skill-name">Communication</div>
                                 </li>
                                 <li>
-                                    <div class="hb-progress hb-progress-circle" data-progress="85"></div> 
+                                    <circle-progress
+                                    :size="100" 
+                                    :percent="85" 
+                                    :fill-color="'#0bceaf'" 
+                                    :empty-color="'#333333'"
+                                    :border-width="6"
+                                    :border-bg-width="6"
+                                    :transition="1000"
+                                    :show-percent="true"
+                                    :viewport="true"
+                                    :class="'hb-progress hb-progress-circle'">
+                                    </circle-progress>
                                     <div class="pr-skill-name">Team Work</div>
                                 </li>
                                 <li>
-                                    <div class="hb-progress hb-progress-circle" data-progress="88"></div>
+                                    <circle-progress
+                                    :size="100" 
+                                    :percent="88" 
+                                    :fill-color="'#0bceaf'" 
+                                    :empty-color="'#333333'"
+                                    :border-width="6"
+                                    :border-bg-width="6"
+                                    :transition="1000"
+                                    :show-percent="true"
+                                    :viewport="true"
+                                    :class="'hb-progress hb-progress-circle'">
+                                    </circle-progress>
                                     <div class="pr-skill-name">Project Management</div>
                                 </li> 
                                 <li>
-                                    <div class="hb-progress hb-progress-circle" data-progress="90"></div>
+                                    <circle-progress
+                                    :size="100" 
+                                    :percent="90" 
+                                    :fill-color="'#0bceaf'" 
+                                    :empty-color="'#333333'"
+                                    :border-width="6"
+                                    :border-bg-width="6"
+                                    :transition="1000"
+                                    :show-percent="true"
+                                    :viewport="true"
+                                    :class="'hb-progress hb-progress-circle'">
+                                    </circle-progress>
                                     <div class="pr-skill-name">Creativity</div>
                                 </li>
                             </ul>
@@ -295,3 +339,15 @@
             </div>
         </main>
 </template>
+
+<script>
+    import "vue3-circle-progress/dist/circle-progress.css";
+    import CircleProgress from "vue3-circle-progress";
+    export default {
+        components: {CircleProgress}
+    }
+</script>
+
+<style scoped>
+
+</style>
