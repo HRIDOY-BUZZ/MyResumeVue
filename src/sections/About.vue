@@ -1,5 +1,8 @@
+<script setup>
+    import Services from '../sections/Services.vue'
+</script>
 <template>
-    <main class="hb-about section-separator" id="hb-about">
+    <main class="hb-about pt-5" id="hb-about">
             <div class="container">
                 <div class="row section-separator">
                     <div class="col-sm-12 col-md-6">
@@ -21,17 +24,15 @@
                                     <li><span>Laravel</span></li>
                                     <li><span>PHP</span></li>
                                     <li><span>MySQL</span></li>
+                                    <li><span>Wordpress</span></li>
+                                    <li><span>Vue.js</span></li>
+                                    <li><span>JQuery</span></li>
+                                    <li><span>Javascript</span></li>
                                     <li><span>HTML</span></li>
                                     <li><span>CSS</span></li>
                                     <li><span>Bootstrap</span></li>
-                                    <li><span>JQuery</span></li>
-                                    <li><span>Javascript</span></li>
-                                    <li><span>Vue.js</span></li>
-                                    <li><span>Wordpress</span></li>
                                     <li><span>Linux</span></li>
                                     <li><span>CPanel & WHM</span></li>
-                                    
-                                    
                                 </ul>
                             </div>
                             <a href="/assets/files/CV_Al-Amin_Islam_Hridoy.pdf" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Downlaod CV <i class="fa fa-download"></i></a>
@@ -40,4 +41,5 @@
                 </div>
             </div>
         </main>
+        <Services />
 </template>

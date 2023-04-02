@@ -3,7 +3,7 @@
         <div class="map-image image-bg">
             <div class="container section-separator">
                 <h1 class="text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                    Contact
+                    Contact Me
                 </h1>
                 <div class="row pt-5">
                     <div class="col-sm-12 hb-footer-address">

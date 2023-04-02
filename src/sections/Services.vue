@@ -1,7 +1,7 @@
 <template>
     <main class="hb-service">
             <div class="container">
-                <div class="row section-separator">
+                <div class="row">
                     <div class="col-sm-12 text-center section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
                         <h2>What I do</h2>
                     </div>

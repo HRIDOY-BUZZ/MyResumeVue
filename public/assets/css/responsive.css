@@ -25,6 +25,16 @@
         right: 0;
     }
 }
+@media only screen and (min-width: 1400px) and (max-width: 1600px){
+    .hb-header .navbar-nav li a{
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px){
+    .hb-header .navbar-nav li a{
+        font-size: 14px;
+    }
+}
 
 @media only screen and (max-width: 991px) {
     .section-separator {
@@ -340,6 +350,9 @@
     .hb-xs-mobile-nav .navbar-nav {
         padding-top: 50px;
         padding-right: 20px;
+    }
+    .hb-header .navbar-nav li a:hover {
+        color: #100e17;
     }
 }
 
