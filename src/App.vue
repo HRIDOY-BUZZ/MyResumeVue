@@ -34,6 +34,7 @@
 <style>
   .atom-spinner{
     position:absolute;
-    margin: 40vh 50vw;
+    margin-top: 40vh;
+    margin-left: calc(50vw - 75px);
   }
 </style>
