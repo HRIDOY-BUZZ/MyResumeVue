@@ -3,6 +3,7 @@ import Home from './sections/Home.vue';
 import About from './sections/About.vue';
 import Services from './sections/Services.vue';
 import Skills from './sections/Skills.vue';
+import Interests from './sections/Interests.vue';
 import Education from './sections/Education.vue';
 import Experiences from './sections/Experiences.vue';
 import Contact from './sections/Contact.vue';
@@ -27,6 +28,11 @@ const routes = [
         path: '/skills',
         name: 'Skills',
         component: Skills
+    },
+    {
+        path: '/interests',
+        name: 'Interests',
+        component: Interests
     },
     {
         path: '/education',

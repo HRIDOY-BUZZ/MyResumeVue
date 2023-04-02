@@ -33,35 +33,13 @@
     });
     /* Loader Code End */
 
-
-    /*
-    |====================
-    | Mobile NAv trigger
-    |=====================
-    */
-
-    var trigger = $('.navbar-toggler'),
-        overlay = $('.overlay'),
-        navc = $('.navbar-collapse'),
-        active = false;
-
-
-    $('.navbar-toggler, .navbar-nav li a, .overlay').on('click', function() {
-        $('.navbar-toggler').toggleClass('active')
-            //   $('#js-navbar-menu').toggleClass('active');
-            //   $('.navbar-collapse').toggleClass('show');
-        overlay.toggleClass('active');
-        navc.toggleClass('active');
-    });
-
-
     /*
     |=================
     | Onepage Nav
     |================
     */
 
-    $('#mh-header').onePageNav({
+    $('#hb-header').onePageNav({
         currentClass: 'active',
         changeHash: false,
         scrollSpeed: 750,
@@ -135,7 +113,7 @@
     | Client review
     |================
     */
-    $('#mh-client-review').owlCarousel({
+    $('#hb-client-review').owlCarousel({
         loop: false,
         responsiveClass: true,
         nav: true,
@@ -163,7 +141,7 @@
     | Project review slide
     |================
     */
-    $('.mh-project-testimonial').owlCarousel({
+    $('.hb-project-testimonial').owlCarousel({
         loop: true,
         responsiveClass: true,
         nav: false,
@@ -223,7 +201,7 @@
     | Project review slide
     |================
     */
-    $('.mh-single-project-slide-by-side').owlCarousel({
+    $('.hb-single-project-slide-by-side').owlCarousel({
         loop: false,
         responsiveClass: true,
         nav: true,
@@ -254,7 +232,7 @@
     | Single client review
     |================
     */
-    $('#mh-single-client-review').owlCarousel({
+    $('#hb-single-client-review').owlCarousel({
         loop: false,
         responsiveClass: true,
         nav: true,
@@ -282,7 +260,7 @@
     | Clint review slide
     |================
     */
-    $('#mh-2-client-review').owlCarousel({
+    $('#hb-2-client-review').owlCarousel({
         loop: false,
         responsiveClass: true,
         nav: true,
