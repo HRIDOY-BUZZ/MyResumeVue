@@ -7,7 +7,7 @@
                 <div class="row section-separator">
                     <div class="col-sm-12 col-md-6">
                         <div class="hb-about-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                            <img src="/assets/images/ab-img.png" alt="Al-Amin Islam Hridoy" class="img-fluid" loading="lazy">
+                            <img src="/assets/images/ab-img.webp" alt="Al-Amin Islam Hridoy" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6">
