@@ -85,7 +85,7 @@
                                             <li><i class="fa fa-circle"></i>App Back-end Development</li>
                                             <li><i class="fa fa-circle"></i>Web Front-end Support</li>
                                             <li><i class="fa fa-circle"></i>Generating necessary REST APIs</li>
-                                            <li><i class="fa fa-circle"></i>API Documentation</li>
+                                            <li><i class="fa fa-circle"></i>API Testing Documentation</li>
                                         </ul>
                                     </div>
                                 </div>
