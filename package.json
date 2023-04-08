@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@yeger/vue-masonry-wall": "^3.4.4",
     "epic-spinners": "^2.0.0",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6",
