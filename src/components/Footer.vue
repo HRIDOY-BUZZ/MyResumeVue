@@ -10,7 +10,7 @@
                                     <p>Copyright <i class="far fa-copyright"></i> {{ year }} <a href="#"> Al-Amin Islam Hridoy</a></p>
                                 </div>
                             </div>
-                            <div class="col-sm-6 text-center">
+                            <div v-if="!isCurrentPage('/')" class="col-sm-6 text-center">
                                 <ul class="social-icon">
                                     <li><a href="https://www.facebook.com/hridoy.al.amin.6/"><i class="fab fa-facebook"></i></a></li>
                                     <li><a href="https://twitter.com/hridoy_alamin"><i class="fab fa-twitter"></i></a></li>
@@ -32,6 +32,11 @@
         setup() {
         const year = ref(new Date().getFullYear())
         return { year }
-        }
+        },
+        methods: {
+            isCurrentPage(path) {
+                return this.$route.path === path;
+            },
+        },
     }
 </script>
