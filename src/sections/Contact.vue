@@ -93,6 +93,7 @@ export default {
                 message: this.messageText,
             }
             try {
+                // const response = await fetch('http://localhost:8888/submit.php', {
                 const response = await fetch('/php_backend/submit.php', {
                     method: 'POST',
                     headers: {
@@ -102,7 +103,8 @@ export default {
                 })
 
                 if (response.ok) {
-                    this.message = 'Your message has been sent!'
+                    const message = await response.text();
+                    this.message = message
                 } else {
                     this.message = 'There was a problem submitting your message. Please try again.'
                 }
@@ -112,10 +114,10 @@ export default {
             }
 
             // Clear form fields
-            // this.firstName = ''
-            // this.lastName = ''
-            // this.email = ''
-            // this.messageText = ''
+            this.firstName = ''
+            this.lastName = ''
+            this.email = ''
+            this.messageText = ''
         }
     },
 }
