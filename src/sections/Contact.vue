@@ -12,20 +12,20 @@
                     ====================
                     -->
                     <div class="col-xl-6 col-lg-5 col-md-12 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                        <form id="contactForm" class="single-form quate-form wow fadeInUp" method="POST">
-                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                        <form id="contactForm" class="single-form quate-form wow fadeInUp" @submit.prevent="submitForm">
+                            <div id="msgSubmit" class="h3 text-center hidden">{{ message }}</div>
                             <div class="row">
                                 <div class="col-md-6 col-sm-12">
-                                    <input name="fname" class="contact-name form-control" id="name" type="text" pattern="([a-zA-Z]([\w -]*[a-zA-Z])?){3,30}" placeholder="First Name" required>
+                                    <input v-model="firstName" name="fname" class="contact-name form-control" id="name" type="text" pattern="([a-zA-Z]([\w -]*[a-zA-Z])?){3,30}" placeholder="First Name" required>
                                 </div>
                                 <div class="col-md-6 col-sm-12">
-                                    <input name="lname" class="contact-email form-control" id="L_name" type="text" pattern="([a-zA-Z]([\w -]*[a-zA-Z])?){3,30}" placeholder="Last Name" required>
+                                    <input v-model="lastName" name="lname" class="contact-email form-control" id="L_name" type="text" pattern="([a-zA-Z]([\w -]*[a-zA-Z])?){3,30}" placeholder="Last Name" required>
                                 </div>
                                 <div class="col-sm-12">
-                                    <input name="email" class="contact-subject form-control" id="email" type="email" placeholder="Your Email Address" required>
+                                    <input v-model="email" name="email" class="contact-subject form-control" id="email" type="email" placeholder="Your Email Address" required>
                                 </div>
                                 <div class="col-sm-12">
-                                    <textarea name="message" class="contact-message" id="message" rows="6" placeholder="Write Something to Me!" required></textarea>
+                                    <textarea v-model="messageText" name="message" class="contact-message" id="message" rows="6" placeholder="Write Something to Me!" required></textarea>
                                 </div>
                                 <div class="btn-form col-sm-12">
                                     <button type="submit" class="btn btn-fill btn-block" name="submit" id="form-submit">Send Message</button>
@@ -72,3 +72,51 @@
         </div>
     </main>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            firstName: '',
+            lastName: '',
+            email: '',
+            messageText: '',
+            message: '',
+        }
+    },
+    methods: {
+        async submitForm() {
+            const formData = {
+                firstName: this.firstName,
+                lastName: this.lastName,
+                email: this.email,
+                message: this.messageText,
+            }
+            try {
+                const response = await fetch('/php_backend/submit.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                })
+
+                if (response.ok) {
+                    this.message = 'Your message has been sent!'
+                } else {
+                    this.message = 'There was a problem submitting your message. Please try again.'
+                }
+            } catch (error) {
+                console.error(error)
+                this.message = 'There was a problem submitting your message. Please try again.'
+            }
+
+            // Clear form fields
+            // this.firstName = ''
+            // this.lastName = ''
+            // this.email = ''
+            // this.messageText = ''
+        }
+    },
+}
+</script>
