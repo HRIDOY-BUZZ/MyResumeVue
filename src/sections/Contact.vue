@@ -74,6 +74,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
     data() {
         return {
@@ -91,26 +92,27 @@ export default {
                 lastName: this.lastName,
                 email: this.email,
                 message: this.messageText,
+                ip: await this.getUserData(),
             }
             try {
-                // const response = await fetch('http://localhost:8888/submit.php', {
-                const response = await fetch('/php_backend/submit.php', {
+                const response = await fetch('https://api.hridoybuzz.me/resume/submit.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(formData)
                 })
+                console.log(JSON.stringify(formData));
 
                 if (response.ok) {
                     const message = await response.text();
-                    this.message = message
+                    this.message = message;
                 } else {
                     this.message = 'There was a problem submitting your message. Please try again.'
                 }
             } catch (error) {
                 console.error(error)
-                this.message = 'There was a problem submitting your message. Please try again.'
+                this.message = 'There was a problem submitting your message. Please try again.2'
             }
 
             // Clear form fields
@@ -118,6 +120,16 @@ export default {
             this.lastName = ''
             this.email = ''
             this.messageText = ''
+        },
+
+        async getUserData() {
+            try {
+                const response = await axios.get('/myapi?format=json');
+                return response.data.ip;
+            } catch (error) {
+                console.error(error);
+                throw new Error('Failed to fetch IP address');
+            }
         }
     },
 }
