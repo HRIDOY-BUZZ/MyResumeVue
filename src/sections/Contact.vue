@@ -102,7 +102,7 @@ export default {
                     },
                     body: JSON.stringify(formData)
                 })
-                console.log(JSON.stringify(formData));
+                console.log(JSON.stringify(formData))
 
                 if (response.ok) {
                     const message = await response.text();
