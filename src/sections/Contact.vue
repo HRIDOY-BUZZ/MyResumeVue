@@ -124,7 +124,7 @@ export default {
 
         async getUserData() {
             try {
-                const response = await axios.get('/myapi?format=json');
+                const response = await axios.get('https://api.ipify.org?format=json');
                 return response.data.ip;
             } catch (error) {
                 console.error(error);
