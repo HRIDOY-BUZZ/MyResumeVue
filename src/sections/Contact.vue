@@ -92,7 +92,7 @@ export default {
                 lastName: this.lastName,
                 email: this.email,
                 message: this.messageText,
-                ip: await this.getUserData(),
+                // ip: await this.getUserData(),
             }
             try {
                 const response = await fetch('https://api.hridoybuzz.me/resume/submit.php', {
