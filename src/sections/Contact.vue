@@ -16,10 +16,10 @@
                             <div id="msgSubmit" class="h3 text-center hidden">{{ message }}</div>
                             <div class="row">
                                 <div class="col-md-6 col-sm-12">
-                                    <input v-model="firstName" name="fname" class="contact-name form-control" id="name" type="text" pattern="([a-zA-Z]([\w -]*[a-zA-Z])?){3,30}" placeholder="First Name" required>
+                                    <input v-model="firstName" name="fname" class="contact-name form-control" id="name" type="text" pattern="([a-zA-Z]([\w \-]*[a-zA-Z])?){3,30}" placeholder="First Name" required>
                                 </div>
                                 <div class="col-md-6 col-sm-12">
-                                    <input v-model="lastName" name="lname" class="contact-email form-control" id="L_name" type="text" pattern="([a-zA-Z]([\w -]*[a-zA-Z])?){3,30}" placeholder="Last Name" required>
+                                    <input v-model="lastName" name="lname" class="contact-email form-control" id="L_name" type="text" pattern="([a-zA-Z]([\w \-]*[a-zA-Z])?){3,30}" placeholder="Last Name" required>
                                 </div>
                                 <div class="col-sm-12">
                                     <input v-model="email" name="email" class="contact-subject form-control" id="email" type="email" placeholder="Your Email Address" required>
@@ -87,12 +87,13 @@ export default {
     },
     methods: {
         async submitForm() {
+            const ip = await this.getUserData();
             const formData = {
                 firstName: this.firstName,
                 lastName: this.lastName,
                 email: this.email,
                 message: this.messageText,
-                ip: await this.getUserData(),
+                ip,
             }
             try {
                 const response = await fetch('https://api.hridoybuzz.me/resume/submit.php', {
