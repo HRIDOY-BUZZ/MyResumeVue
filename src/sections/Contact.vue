@@ -152,3 +152,10 @@ export default {
     },
 }
 </script>
+
+<style>
+#msgSubmit .hollow-dots-spinner{
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
