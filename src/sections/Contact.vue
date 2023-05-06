@@ -13,7 +13,17 @@
                     -->
                     <div class="col-xl-6 col-lg-5 col-md-12 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                         <form id="contactForm" class="single-form quate-form wow fadeInUp" @submit.prevent="submitForm">
-                            <div id="msgSubmit" class="h3 text-center hidden">{{ message }}</div>
+                            
+                            <div v-if="loading" id="msgSubmit" class="h3 text-center">
+                                <hollow-dots-spinner
+                                    :dot-size="15"
+                                    :dots-num="4"
+                                    color="#FFFFFF"
+                                />
+                            </div>
+                            <div v-else id="msgSubmit" class="h3 text-center hidden">
+                                {{ message }}
+                            </div>
                             <div class="row">
                                 <div class="col-md-6 col-sm-12">
                                     <input v-model="firstName" name="fname" class="contact-name form-control" id="name" type="text" pattern="([a-zA-Z]([\w \-]*[a-zA-Z])?){3,30}" placeholder="First Name" required>
@@ -75,7 +85,11 @@
 
 <script>
 import axios from 'axios'
+import { HollowDotsSpinner } from 'epic-spinners'
 export default {
+    components: {
+        HollowDotsSpinner
+    },
     data() {
         return {
             firstName: '',
@@ -83,10 +97,12 @@ export default {
             email: '',
             messageText: '',
             message: '',
+            loading: false,
         }
     },
     methods: {
         async submitForm() {
+            this.loading = true;
             const ip = await this.getUserData();
             const formData = {
                 firstName: this.firstName,
@@ -121,6 +137,7 @@ export default {
             this.lastName = ''
             this.email = ''
             this.messageText = ''
+            this.loading = false;
         },
 
         async getUserData() {
