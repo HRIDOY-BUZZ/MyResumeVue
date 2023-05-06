@@ -155,7 +155,7 @@ export default {
                     title: 'BUZZ Love Calculator',
                     subtitle: 'Personal Fun Project using Core PHP and Bootstrap',
                     image: '/assets/images/portfolio/love.webp', 
-                    link: 'http://buzz-love.rf.gd/',
+                    link: 'https://love.hridoybuzz.me/',
                     linktext: 'Click to Visit Site',
                     linkClass: 'fst-italic',
                 },
