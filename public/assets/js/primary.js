@@ -5,47 +5,6 @@
         return this.addBack.apply(this, arguments);
     }
 
-    /* Loader Code Start */
-    // $(window).on("load", function() {
-    //     $(".section-loader").fadeOut("slow");
-
-    //     var $container = $('.portfolioContainer');
-    //     $container.isotope({
-    //         filter: '*',
-    //         animationOptions: {
-    //             queue: true
-    //         }
-    //     });
-
-    //     $('.portfolio-nav li').click(function() {
-    //         $('.portfolio-nav .current').removeClass('current');
-    //         $(this).addClass('current');
-
-    //         var selector = $(this).attr('data-filter');
-    //         $container.isotope({
-    //             filter: selector,
-    //             animationOptions: {
-    //                 queue: true
-    //             }
-    //         });
-    //         return false;
-    //     });
-    // });
-    /* Loader Code End */
-
-    /*
-    |=================
-    | Onepage Nav
-    |================
-    */
-
-    $('#hb-header').onePageNav({
-        currentClass: 'active',
-        changeHash: false,
-        scrollSpeed: 750,
-        scrollThreshold: 0.5,
-    });
-
     /*
     |=================
     | fancybox
@@ -64,15 +23,6 @@
         mobile: false // trigger animations on mobile devices (default is true)
     });
     wow.init();
-
-
-    /*
-    |=================
-    | AOS
-    |================
-    */
-
-    //AOS.init();
 
     /*
     | ==========================
@@ -99,131 +49,5 @@
         $(this).css("width", width)
             .empty()
             .append('<i class="fa fa-circle"></i>');
-    });
-
-    /*
-    |=================
-    | Portfolio mixin
-    |================
-    */
-    $('#portfolio-item').mixItUp();
-
-    /*
-    |=================
-    | Client review
-    |================
-    */
-    $('#hb-client-review').owlCarousel({
-        loop: false,
-        responsiveClass: true,
-        nav: true,
-        autoplay: false,
-        smartSpeed: 450,
-        stopOnHover: true,
-        animateIn: 'slideInRight',
-        animateOut: 'slideOutLeft',
-        autoplayHoverPause: true,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            768: {
-                items: 2,
-            },
-            1170: {
-                items: 3,
-            }
-        }
-    });
-
-    /*
-    |=================
-    | Project review slide
-    |================
-    */
-    $('.hb-project-testimonial').owlCarousel({
-        loop: true,
-        responsiveClass: true,
-        nav: false,
-        dots: false,
-        autoplay: true,
-        smartSpeed: 450,
-        stopOnHover: true,
-        animateIn: 'slideInRight',
-        animateOut: 'slideOutLeft',
-        autoplayHoverPause: true,
-        pagination: false,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            768: {
-                items: 1,
-            },
-            1170: {
-                items: 1,
-            }
-        }
-    });
-
-    /*
-    |=================
-    | Single Project review
-    |================
-    */
-    $('#single-project').owlCarousel({
-        loop: false,
-        responsiveClass: true,
-        nav: false,
-        dots: true,
-        autoplay: false,
-        smartSpeed: 450,
-        stopOnHover: true,
-        animateIn: 'slideInRight',
-        animateOut: 'slideOutLeft',
-        autoplayHoverPause: true,
-        pagination: false,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            768: {
-                items: 1,
-            },
-            1170: {
-                items: 1,
-            }
-        }
-    });
-
-    /*
-    |=================
-    | Project review slide
-    |================
-    */
-    $('.hb-single-project-slide-by-side').owlCarousel({
-        loop: false,
-        responsiveClass: true,
-        nav: true,
-        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        dots: false,
-        autoplay: false,
-        smartSpeed: 450,
-        stopOnHover: true,
-        animateIn: 'slideInRight',
-        animateOut: 'slideOutLeft',
-        autoplayHoverPause: true,
-        pagination: false,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            768: {
-                items: 1,
-            },
-            1170: {
-                items: 1,
-            }
-        }
     });
 }(jQuery));
