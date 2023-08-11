@@ -61,4 +61,10 @@ const router = createRouter({
     history: createWebHistory(),
 })
 
+router.beforeEach((to, from, next) => {
+    // Scroll to the top of the page before each route change
+    window.scrollTo(0, 0);
+    next();
+});
+
 export default router

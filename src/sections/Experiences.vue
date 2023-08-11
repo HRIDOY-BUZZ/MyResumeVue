@@ -11,7 +11,7 @@
     <main class="hb-experince" id="hb-experience">
             <div class="bolor-overlay">
                 <div class="container section-separator">
-                    <h1 class="text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                    <h1 class="text-center wow fadeInUp" :class="{ 'fs-3': window.innerWidth < 440 }" data-wow-duration="0.8s" data-wow-delay="0.2s">
                         Professional Experiences
                     </h1>
                     <div class="row pt-5">
@@ -20,7 +20,7 @@
                                 <div class="hb-experience-deatils">
                                     <!-- Workplace-->
                                     <div class="hb-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                                        <h4>Full Stack Web Developer @ <a href="http://xitsolution.com/">XiT Solutions BD</a></h4>
+                                        <h4>Full Stack Web Developer @ <a href="http://xitsolution.com/">XiT Solution</a></h4>
                                         <div class="hb-eduyear">August 2021 - Present</div>
                                         <span>Responsibilities :</span>
                                         <ul class="work-responsibility">

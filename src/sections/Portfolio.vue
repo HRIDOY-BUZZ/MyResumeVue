@@ -8,7 +8,7 @@
                 <div class="part col-sm-12">
                     <div class="hb-project-gallery col-sm-12 wow fadeInUp" id="project-gallery" data-wow-duration="0.8s" data-wow-delay="0.5s">
                         <div class="container portfolioContainer row">
-                            <masonry-wall :items="projects" :ssr-columns="1" :column-width="350" :gap="20">
+                            <masonry-wall :items="projects" :ssr-columns="1" :column-width="300" :gap="20">
                                 <template #default="{ item, index }">
                                     <div class="grid-item  user-interface">
                                         <figure>
@@ -98,6 +98,15 @@ export default {
                 },
                 {
                     id: 6,
+                    title: 'Strategy Summit 2023', 
+                    subtitle: 'Summit Registration Website using Core PHP and Tailwind',
+                    image: '/assets/images/portfolio/ss23.webp', 
+                    link: 'https://strategysummit.valorofbangladesh.com/',
+                    linktext: 'Click to Visit Site',
+                    linkClass: 'fst-italic',
+                },
+                {
+                    id: 7,
                     title: 'Bangladesh Cancer Aid Trust Organization', 
                     subtitle: 'Oraganization Portfolio Website with multiple payment getways using Laravel, Bootstrap and JQuery',
                     image: '/assets/images/portfolio/bancat.webp', 
@@ -106,7 +115,7 @@ export default {
                     linkClass: 'fst-italic',
                 },
                 {
-                    id: 7,
+                    id: 8,
                     title: 'Oz Tech Shopping', 
                     subtitle: 'Tech based E-commerce Website using Wordpress and Woocommerce',
                     image: '/assets/images/portfolio/ozts.webp', 
@@ -115,7 +124,7 @@ export default {
                     linkClass: 'fst-italic',
                 },
                 {
-                    id: 8,
+                    id: 9,
                     title: 'Splendor Transit', 
                     subtitle: 'Online Car Rental Website with multiple payment getways using Laravel, Bootstrap and JQuery',
                     image: '/assets/images/portfolio/splendor.webp', 
@@ -124,7 +133,7 @@ export default {
                     linkClass: 'fst-italic',
                 },
                 {
-                    id: 9,
+                    id: 10,
                     title: 'XiT Solution Career Portal', 
                     subtitle: 'Employee Apply and Recruitment portal using Laravel, Bootstrap and JQuery',
                     image: '/assets/images/portfolio/xit.webp', 
@@ -133,7 +142,7 @@ export default {
                     linkClass: 'fst-italic',
                 },
                 {
-                    id: 10,
+                    id: 11,
                     title: 'Pricepond Old site', 
                     subtitle: 'Price Comparison Shopping Engine (Maintenance Only) using Core PHP, Javascript and CSS',
                     image: '/assets/images/portfolio/pp_old.webp', 
@@ -142,7 +151,7 @@ export default {
                     linkClass: 'fst-italic',
                 },
                 {
-                    id: 11,
+                    id: 12,
                     title: 'XiT HRM Software', 
                     subtitle: 'Employee Attendance Management system using Core PHP and Bootstrap',
                     image: '/assets/images/portfolio/hrm.webp', 
@@ -151,16 +160,25 @@ export default {
                     linkClass: 'fst-italic',
                 },
                 {
-                    id: 12,
+                    id: 13,
                     title: 'BUZZ Love Calculator',
-                    subtitle: 'Personal Fun Project using Core PHP and Bootstrap',
+                    subtitle: 'Personal Fun Project using Vue.js and Bootstrap',
                     image: '/assets/images/portfolio/love.webp', 
                     link: 'https://love.hridoybuzz.me/',
                     linktext: 'Click to Visit Site',
                     linkClass: 'fst-italic',
                 },
                 {
-                    id: 13,
+                    id: 14,
+                    title: 'Green Earth Technologies', 
+                    subtitle: 'Portfolio and Product Display website using Laravel, Bootstrap and JQuery',
+                    image: '/assets/images/portfolio/get.webp', 
+                    link: '#',
+                    linktext: 'Under Development',
+                    linkClass: 'fst-italic text-danger',
+                },
+                {
+                    id: 15,
                     title: 'Pricepond New Site', 
                     subtitle: 'Price Comparison Shopping Engine using Laravel, Bootstrap and JQuery',
                     image: '/assets/images/portfolio/pp_new.webp', 
@@ -169,7 +187,7 @@ export default {
                     linkClass: 'fst-italic text-danger',
                 },
                 {
-                    id: 14,
+                    id: 16,
                     title: 'Pricepond Merchant Panel', 
                     subtitle: 'A Complete panel for Pricepond Merchants using Laravel, Bootstrap and JQuery',
                     image: '/assets/images/portfolio/merchant.webp', 
@@ -178,7 +196,7 @@ export default {
                     linkClass: 'fst-italic text-danger',
                 },
                 {
-                    id: 15,
+                    id: 17,
                     title: 'Ponyo Posari', 
                     subtitle: 'Online Grocery Website using Laravel, Bootstrap and JQuery',
                     image: '/assets/images/portfolio/ponyoposari.webp', 
@@ -188,7 +206,7 @@ export default {
                     
                 },
                 {
-                    id: 16,
+                    id: 18,
                     title: 'Hungry Cuisine', 
                     subtitle: 'Online Restaurant Website using Core PHP and Materialize CSS',
                     image: '/assets/images/portfolio/hungry.webp', 
@@ -198,7 +216,7 @@ export default {
                     
                 },
                 {
-                    id: 17,
+                    id: 19,
                     title: 'Madina News BD', 
                     subtitle: 'Online News Portal using Wordpress',
                     image: '/assets/images/portfolio/news.webp', 
@@ -208,7 +226,7 @@ export default {
                     
                 },
                 {
-                    id: 18,
+                    id: 20,
                     title: 'Akond Style', 
                     subtitle: 'Online Shopping Ecommerce Website using Wordpress and Woocommerce',
                     image: '/assets/images/portfolio/akond.webp', 
@@ -218,7 +236,7 @@ export default {
                     
                 },
                 {
-                    id: 19,
+                    id: 21,
                     title: 'Poricharika', 
                     subtitle: 'Online House Maid Service Website using Laravel, Bootstrap and JQuery',
                     image: '/assets/images/portfolio/poricharika.webp', 
