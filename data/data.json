@@ -145,6 +145,76 @@
             ]
         }
     ],
+    "experiences": [
+        {
+            "styleData": "",
+            "designation": "Full Stack Web Developer",
+            "company":"XiT Solution",
+            "URL": "http://xitsolution.com/",
+            "duration": "August 2021 - Present",
+            "responsibilities": [
+                "Web Back-end Development (Laravel, PHP)",
+                "Front-end Development (Bootstrap, JQuery)",
+                "Legacy Web Projects Maintenance (PHP, Wordpress, CSS, JQuery)",
+                "Creating and Fixing Custom Scripts (PHP)",
+                "Managing Linux Dedicated/Private Web Servers (SSH, WHM, CPanel)"
+            ]
+        },
+        {
+            "styleData": "",
+            "designation": "Project Manager (Part-time)",
+            "company":"eBuzz-IT",
+            "URL": "http://ebuzz-it.com/",
+            "duration": "October 2021 - Present",
+            "responsibilities": [
+                "Making Work plans and Timeline for projects",
+                "Maintaining the whole Developer Team and Tasks",
+                "Maintaining both front-end and Backend features (Laravel, Bootstrap)",
+                "Verifying and Merging codebases (Github)",
+                "Database Management (MySQL)",
+                "Bug Fixes for both Front-end and Backend Functionalities",
+                "Web Server Management (CPanel)"
+            ]
+        },
+        {
+            "styleData": "window.innerWidth > 1199 ? { position: 'relative', top: '-52px' } : {}",
+            "designation": "Full Stack Web Developer",
+            "company":"Oxdora I Tech",
+            "URL": "http://oxdoraitech.com/",
+            "duration": "January 2021 - July 2021",
+            "responsibilities": [
+                "Web Front-end Development",
+                "Web Back-end Development",
+                "Project Management"
+            ]
+        },
+        {
+            "styleData": "",
+            "designation": "Web Back-end Developer (Part-time)",
+            "company":"BMS Systems",
+            "URL": "https://bmssystems.org/",
+            "duration": "June 2021 - Present",
+            "responsibilities": [
+                "Web Back-end Development",
+                "App Back-end Development",
+                "Web Front-end Support",
+                "Generating necessary REST APIs",
+                "API Testing Documentation"
+            ]
+        },
+        {
+            "styleData": "window.innerWidth > 1199 ? { position: 'relative', top: '-103px' } : {}",
+            "designation": "Campus Ambassador",
+            "company":"Creative It Institute",
+            "URL": "https://creativeitinstitute.com/",
+            "duration": "January 2020 - January 2021",
+            "responsibilities": [
+                "Let everyone know about the importance and benefits of IT courses",
+                "Let everyone know about the Latest course offers",
+                "Attending Free sessions and Demo classes"
+            ]
+        }
+    ],
     "projects": [
         {
             "id": 1,
