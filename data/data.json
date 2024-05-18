@@ -1,0 +1,339 @@
+{
+    "about": [
+        { "skill": "Laravel" },
+        { "skill": "Core PHP" },
+        { "skill": "MySQL" },
+        { "skill": "Shopify" },
+        { "skill": "Wordpress" },
+        { "skill": "Vue Js" },
+        { "skill": "Vannila Js" },
+        { "skill": "Bootstrap" },
+        { "skill": "Linux" },
+        { "skill": "WHM & cPanel" },
+        { "skill": "CyberPanel" },
+        { "skill": "AWS" }
+    ],
+    "services": [
+        {
+            "delay": "0.3s",
+            "icon": "fas fa-code purple-color",
+            "title": "Web Frontend Development",
+            "description": "Creating beautiful websites with responsive user interfaces and stunning designs using HTML, CSS, Bootstrap, and Vue.js. Designing and developing front-end solutions that deliver a great user experience."
+        },
+        {
+            "delay": "0.3s",
+            "icon": "fab fa-laravel iron-color",
+            "title": "Web Backend Development",
+            "description": "Building Smart and Stunning Websites from big to small with dynamic features and functionalities using PHP and Laravel. Also ensuring the necessary optimizations for performance and reliability to deliver seamless experience"
+        },
+        {
+            "delay": "0.3s",
+            "icon": "fas fa-object-ungroup yellow-color",
+            "title": "Web Application Development",
+            "description": "Crafting impactful and functional web applications and software using PHP, Laravel, and MySQL. Utilizing best practices for optimal performance and scalability to provide a seamless user experience."
+        },
+        {
+            "delay": "0.7s",
+            "icon": "fab fa-wordpress sky-color",
+            "title": "Wordpress",
+            "description": "Crafting bespoke WordPress websites with custom themes and plugins to cater to your specific requirements and needs. From design to deployment, ensuring seamless performance and user experience."
+        },
+        {
+            "delay": "0.7s",
+            "icon": "fas fa-server green-color",
+            "title": "Server Management",
+            "description": "Expert in managing Linux servers via SSH and also using CPanel & WHM. Proficient in deploying, configuring, manageing database and maintaining servers to ensure optimal performance, security, and reliability."
+        }
+    ],
+    "skills": [
+        {
+            "PSkills": [
+                { "id": 1, "name": "Communication", "percent": 93 },
+                { "id": 2, "name": "Team Work", "percent": 85 },
+                { "id": 3, "name": "Project Management", "percent": 88 },
+                { "id": 4, "name": "Creativity", "percent": 90 }
+            ],
+            "TSkills": [
+                { "id": 1, "name": "Laravel", "percent": 77 },
+                { "id": 2, "name": "PHP", "percent": 86 },
+                { "id": 3, "name": "MySQL", "percent": 82 },
+                { "id": 4, "name": "Shopify", "percent": 74 },
+                { "id": 5, "name": "WordPress", "percent": 74 },
+                { "id": 6, "name": "Vue.Js", "percent": 55 },
+                { "id": 7, "name": "Vanilla Javascript", "percent": 75 },
+                { "id": 8, "name": "HTML", "percent": 90 },
+                { "id": 9, "name": "CSS / Bootstrap", "percent": 88 },
+                { "id": 10, "name": "C / C++", "percent": 88 },
+                { "id": 11, "name": "C#", "percent": 47 },
+                { "id": 12, "name": "Java", "percent": 55 },
+                { "id": 13, "name": "Python", "percent": 45 },
+                { "id": 14, "name": "Linux", "percent": 81 },
+                { "id": 15, "name": "Web Server", "percent": 75 }
+            ],
+            "ESkills": [
+                { "id": 1, "name": "Adobe Photoshop", "percent": 79 },
+                { "id": 2, "name": "Adobe Illustrator", "percent": 50 },
+                { "id": 3, "name": "Canva", "percent": 71 },
+                { "id": 4, "name": "GIMP", "percent": 58 },
+                { "id": 5, "name": "Arduino", "percent": 60 },
+                { "id": 6, "name": "Proteus", "percent": 57 }
+            ]
+        }
+    ],
+    "interests": [
+        {
+            "title": "Competitive Programming",
+            "description": "Ever since I can remember, I've always been fascinated by the power of <strong>logic</strong>. Whether it's solving <strong>complex puzzles</strong> or tackling <strong>challenging questions</strong>, I find myself drawn to anything that requires a <strong>logical approach</strong>. As I grew older, I discovered my love for <strong>competitive programming</strong>, and I began exploring different online platforms such as <strong>UVa, LightOJ, CodeForces, URi,</strong> and more recently, <strong>Leetcode.</strong> Each problem presents a unique challenge that tests my logical reasoning skills, and I'm always eager to push myself further and learn more."
+        },
+        {
+            "title": "Robotics",
+            "description": "Exploring the exciting world of robotics using <strong>Arduino</strong> and other <strong>micro-controllers</strong>. I enjoy <strong>programming</strong> these devices and integrating <strong>sensors</strong> to create unique and interactive <strong>robotic figures</strong>. It's a challenging and fulfilling hobby that allows me to exercise my <strong>creativity</strong> and <strong>problem-solving</strong> skills."
+        },
+        {
+            "title": "Basic Electronics",
+            "description": "From a young age, I've had a fascination with <strong>electronic components</strong> and the way they work. Over the years, I've honed my skills in repairing and building <strong>electronic devices</strong>, and this <strong>hobby</strong> has evolved into a <strong>passion</strong> for exploring the latest advancements in the field. Today, I actively seek out opportunities to use my knowledge to <strong>benefit</strong> others. Whether it's helping a friend repair a faulty device or sharing my expertise with a community of <strong>fellow hobbyists</strong>, I find great joy in using my <strong>skills</strong> to make a <strong>positive impact</strong>."
+        },
+        {
+            "title": "Indoor Sports and Games",
+            "description": "While not a dedicated sportsman, I enjoy playing indoor games like <strong>Chess, Carrom, Pool</strong> and <strong>Card</strong>. These games not only provide a fun and challenging experience, but also help to sharpen <strong>strategic thinking, problem solving,</strong> and <strong>decision-making skills</strong>. Whether playing with friends or family, or taking on new opponents, I always find these games to be a great way to <strong>unwind</strong> and <strong>have some fun</strong>."
+        },
+        {
+            "title": "Outdoor Sports",
+            "description": "Sports and outdoor games have always been an <strong>enjoyable activity</strong> for me. While I may not consider myself a professional athlete, I have always had a great time playing games such as <strong>cricket, football,</strong> and <strong>badminton</strong>. I also enjoy <strong>watching</strong> these games on television, and often find myself cheering for my <strong>favorite teams</strong> and <strong>athletes</strong>. Even though it's just a casual hobby, playing and watching sports has always been a great way for me to <strong>unwind</strong> and <strong>have fun</strong>."
+        },
+        {
+            "title": "Other Interests",
+            "description": "I enjoy <strong>watching movies and series</strong> as a way to <strong>unwind</strong> and <strong>escape</strong> from everyday life. Whether it's a <strong>classic film</strong> or <strong>the latest binge-worthy show</strong>, I love getting lost in a <strong>good story</strong> no matter the genre. I also enjoy <strong>listening to music</strong>, whether it's discovering new artists or revisiting old <strong>favorites</strong>. Music has the power to <strong>uplift my mood</strong> and <strong>inspire creativity</strong>."
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor of Science (BSc)",
+            "institution": "East West University",
+            "institutionUrl": "https://ewubd.edu/",
+            "department": "Department of Computer Science and Engineering",
+            "year": "2016-2020",
+            "campus": ["A/2, Jahurul Islam Avenue, Jahurul Islam City, Aftabnagar, Dhaka-1212, Bangladesh"]
+        },
+        {
+            "degree": "Higher Secondary School Certificate (HSC)",
+            "institution": "Govt. Science College (Dhaka Board)",
+            "institutionUrl": "http://gsctd.edu.bd/en/",
+            "department": "Group: Science",
+            "year": "2013-2015",
+            "campus": ["34/B Farmgate - Tejturi Bazar Rd, Tejgaon, Dhaka-1215, Bangladesh"]
+        },
+        {
+            "degree": "Secondary School Certificate (SSC)",
+            "institution": "Motijheel Model School & College (Dhaka Board)",
+            "institutionUrl": "https://www.motijheelmodelschoolandcollege.edu.bd/",
+            "department": "Group: Science",
+            "year": "2011-2013",
+            "campus": [
+                "Kamalapur Road, Motijheel, Dhaka-1000, Bangladesh",
+                "Atish Dipankar Road, Bashabo, Shabujbag, Dhaka-1214, Bangladesh"
+            ]
+        },
+        {
+            "degree": "Junior School Certificate (JSC)",
+            "institution": "Motijheel Model School & College (Dhaka Board)",
+            "institutionUrl": "https://www.motijheelmodelschoolandcollege.edu.bd/",
+            "year": "2010",
+            "campus": [
+                "Kamalapur Road, Motijheel, Dhaka-1000, Bangladesh",
+                "Atish Dipankar Road, Bashabo, Shabujbag, Dhaka-1214, Bangladesh"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "title": "Oxdora I Tech",
+            "subtitle": "Company Portfolio Website using Laravel, Bootstrap and JQuery",
+            "image": "/assets/images/portfolio/oxdora_new.webp",
+            "link": "https://oxdoraitech.com/",
+            "linktext": "Click to Visit Site",
+            "linkClass": "fst-italic"
+        },
+        {
+            "id": 2,
+            "title": "Web CV",
+            "subtitle": "Personal Web Curriculumn Vitae using Vue.js",
+            "image": "/assets/images/portfolio/resume.webp",
+            "link": "/",
+            "linktext": "Click to Visit Site",
+            "linkClass": "fst-italic"
+        },
+        {
+            "id": 3,
+            "title": "Valor of Bangladesh",
+            "subtitle": "Company Portfolio Website using Laravel, Bootstrap and JQuery",
+            "image": "/assets/images/portfolio/vob.webp",
+            "link": "https://valorofbangladesh.com/",
+            "linktext": "Click to Visit Site",
+            "linkClass": "fst-italic"
+        },
+        {
+            "id": 4,
+            "title": "CXO Summit 2022",
+            "subtitle": "Summit Registration Website using Core PHP and Tailwind",
+            "image": "/assets/images/portfolio/cxo.webp",
+            "link": "https://cxos2022.valorofbangladesh.com/",
+            "linktext": "Click to Visit Site",
+            "linkClass": "fst-italic"
+        },
+        {
+            "id": 5,
+            "title": "Strategy Summit 2022",
+            "subtitle": "Summit Registration Website using Core PHP and Tailwind",
+            "image": "/assets/images/portfolio/strategy.webp",
+            "link": "https://strategysummit.valorofbangladesh.com/",
+            "linktext": "Click to Visit Site",
+            "linkClass": "fst-italic"
+        },
+        {
+            "id": 6,
+            "title": "Strategy Summit 2023",
+            "subtitle": "Summit Registration Website using Core PHP and Tailwind",
+            "image": "/assets/images/portfolio/ss23.webp",
+            "link": "https://strategysummit.valorofbangladesh.com/",
+            "linktext": "Click to Visit Site",
+            "linkClass": "fst-italic"
+        },
+        {
+            "id": 7,
+            "title": "Bangladesh Cancer Aid Trust Organization",
+            "subtitle": "Organization Portfolio Website with multiple payment gateways using Laravel, Bootstrap and JQuery",
+            "image": "/assets/images/portfolio/bancat.webp",
+            "link": "https://bancat.org.bd/",
+            "linktext": "Click to Visit Site",
+            "linkClass": "fst-italic"
+        },
+        {
+            "id": 8,
+            "title": "Oz Tech Shopping",
+            "subtitle": "Tech based E-commerce Website using Wordpress and Woocommerce",
+            "image": "/assets/images/portfolio/ozts.webp",
+            "link": "https://oztechshopping.com.au/",
+            "linktext": "Click to Visit Site",
+            "linkClass": "fst-italic"
+        },
+        {
+            "id": 9,
+            "title": "Splendor Transit",
+            "subtitle": "Online Car Rental Website with multiple payment gateways using Laravel, Bootstrap and JQuery",
+            "image": "/assets/images/portfolio/splendor.webp",
+            "link": "https://splendortransit.com/",
+            "linktext": "Click to Visit Site",
+            "linkClass": "fst-italic"
+        },
+        {
+            "id": 10,
+            "title": "XiT Solution Career Portal",
+            "subtitle": "Employee Apply and Recruitment portal using Laravel, Bootstrap and JQuery",
+            "image": "/assets/images/portfolio/xit.webp",
+            "link": "https://xitsolution.com/career/",
+            "linktext": "Click to Visit Site",
+            "linkClass": "fst-italic"
+        },
+        {
+            "id": 11,
+            "title": "Pricepond Old site",
+            "subtitle": "Price Comparison Shopping Engine (Maintenance Only) using Core PHP, Javascript and CSS",
+            "image": "/assets/images/portfolio/pp_old.webp",
+            "link": "https://pricepond.com.au/",
+            "linktext": "Click to Visit Site",
+            "linkClass": "fst-italic"
+        },
+        {
+            "id": 12,
+            "title": "XiT HRM Software",
+            "subtitle": "Employee Attendance Management system using Core PHP and Bootstrap",
+            "image": "/assets/images/portfolio/hrm.webp",
+            "link": "https://hrm.xitsolution.com/",
+            "linktext": "Click to Visit Site",
+            "linkClass": "fst-italic"
+        },
+        {
+            "id": 13,
+            "title": "BUZZ Love Calculator",
+            "subtitle": "Personal Fun Project using Vue.js and Bootstrap",
+            "image": "/assets/images/portfolio/love.webp",
+            "link": "https://love.hridoybuzz.me/",
+            "linktext": "Click to Visit Site",
+            "linkClass": "fst-italic"
+        },
+        {
+            "id": 14,
+            "title": "Green Earth Technologies",
+            "subtitle": "Portfolio and Product Display website using Laravel, Bootstrap and JQuery",
+            "image": "/assets/images/portfolio/get.webp",
+            "link": "#",
+            "linktext": "Under Development",
+            "linkClass": "fst-italic text-danger"
+        },
+        {
+            "id": 15,
+            "title": "Pricepond New Site",
+            "subtitle": "Price Comparison Shopping Engine using Laravel, Bootstrap and JQuery",
+            "image": "/assets/images/portfolio/pp_new.webp",
+            "link": "https://new.pricepond.com.au/",
+            "linktext": "Under Development",
+            "linkClass": "fst-italic text-danger"
+        },
+        {
+            "id": 16,
+            "title": "Pricepond Merchant Panel",
+            "subtitle": "A Complete panel for Pricepond Merchants using Laravel, Bootstrap and JQuery",
+            "image": "/assets/images/portfolio/merchant.webp",
+            "link": "https://merchant.pricepond.com.au/",
+            "linktext": "Under Development",
+            "linkClass": "fst-italic text-danger"
+        },
+        {
+            "id": 17,
+            "title": "Ponyo Posari",
+            "subtitle": "Online Grocery Website using Laravel, Bootstrap and JQuery",
+            "image": "/assets/images/portfolio/ponyoposari.webp",
+            "link": "https://ponyoposari.com/",
+            "linktext": "Under Development",
+            "linkClass": "fst-italic text-danger"
+        },
+        {
+            "id": 18,
+            "title": "Hungry Cuisine",
+            "subtitle": "Online Restaurant Website using Core PHP and Materialize CSS",
+            "image": "/assets/images/portfolio/hungry.webp",
+            "link": "#",
+            "linktext": "Discontinued",
+            "linkClass": "fst-italic text-danger"
+        },
+        {
+            "id": 19,
+            "title": "Madina News BD",
+            "subtitle": "Online News Portal using Wordpress",
+            "image": "/assets/images/portfolio/news.webp",
+            "link": "#",
+            "linktext": "Discontinued",
+            "linkClass": "fst-italic text-danger"
+        },
+        {
+            "id": 20,
+            "title": "Akond Style",
+            "subtitle": "Online Shopping Ecommerce Website using Wordpress and Woocommerce",
+            "image": "/assets/images/portfolio/akond.webp",
+            "link": "#",
+            "linktext": "Discontinued",
+            "linkClass": "fst-italic text-danger"
+        },
+        {
+            "id": 21,
+            "title": "Poricharika",
+            "subtitle": "Online House Maid Service Website using Laravel, Bootstrap and JQuery",
+            "image": "/assets/images/portfolio/poricharika.webp",
+            "link": "#",
+            "linktext": "Under Development",
+            "linkClass": "fst-italic text-danger"
+        }
+    ]
+}
