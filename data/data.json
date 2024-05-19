@@ -147,66 +147,106 @@
     ],
     "experiences": [
         {
-            "styleData": "",
-            "designation": "Full Stack Web Developer",
-            "company":"XiT Solution",
-            "URL": "http://xitsolution.com/",
-            "duration": "August 2021 - Present",
+            "id": 1,
+            "designation": "Full-stack Software Engineer",
+            "company":"EchoLogyx Ltd.",
+            "URL": "https://echologyx.com/",
+            "location": [
+                "110-112 Parkway, London, UK.",
+                "Westlake, Miami, FL, USA.",
+                "Uttara, Dhaka, Bangladesh.",
+                "Dhanmondi, Dhaka Bangladesh.",
+                "Muradpur, Chattagram, Bangladesh."
+            ],
+            "duration": "December 2023 - Present",
             "responsibilities": [
-                "Web Back-end Development (Laravel, PHP)",
-                "Front-end Development (Bootstrap, JQuery)",
-                "Legacy Web Projects Maintenance (PHP, Wordpress, CSS, JQuery)",
-                "Creating and Fixing Custom Scripts (PHP)",
-                "Managing Linux Dedicated/Private Web Servers (SSH, WHM, CPanel)"
+                "Shopify Theme Development (Liquid)",
+                "Shopify App Development (Laravel, MySQL, REST API)",
+                "A/B Testing Variation Development (Vanilla Js)",
+                "Web Front-end Development (Bootstrap, Vanilla Js)",
+                "Web Backend Development (Laravel, MySQL)",
+                "Managing Web Servers (AWS, CyberPanel)"
             ]
         },
         {
-            "styleData": "",
+            "id": 2,
             "designation": "Project Manager (Part-time)",
             "company":"eBuzz-IT",
-            "URL": "http://ebuzz-it.com/",
+            "URL": "https://ebuzz-it.com/",
+            "location": ["(Online)"],
             "duration": "October 2021 - Present",
             "responsibilities": [
-                "Making Work plans and Timeline for projects",
-                "Maintaining the whole Developer Team and Tasks",
-                "Maintaining both front-end and Backend features (Laravel, Bootstrap)",
-                "Verifying and Merging codebases (Github)",
+                "Project Planning and Estimations",
+                "Project Workflow Management",
+                "Development Team Management",
+                "Git Repositories Management (Github)",
                 "Database Management (MySQL)",
-                "Bug Fixes for both Front-end and Backend Functionalities",
+                "Bug Fixes and Support for both Front-end and Backend Functionalities",
                 "Web Server Management (CPanel)"
             ]
         },
         {
-            "styleData": "window.innerWidth > 1199 ? { position: 'relative', top: '-52px' } : {}",
+            "id": 3,
+            "designation": "Full-stack Software Engineer",
+            "company":"PRICEPOND PTY LTD.",
+            "URL": "https://pricepond.com.au/",
+            "location": [
+                "Sydney, NSW, Australia.",
+                "Kallyanpur, Dhaka, Bangladesh"
+            ],
+            "duration": "August 2021 - November 2023",
+            "responsibilities": [
+                "Web Back-end Development (Laravel, PHP, MySQL)",
+                "Front-end Development (Bootstrap, Javascript)",
+                "Legacy Web Projects Maintenance (PHP, Wordpress, CSS, JQuery)",
+                "Developing and Updating Custom Scripts (PHP)",
+                "Managing Linux Dedicated/Private Web Servers (SSH, WHM, CPanel)"
+            ]
+        },
+        {
+            "id": 4,
+            "designation": "Web Back-end Developer (Part-time)",
+            "company":"BMS Systems",
+            "URL": "https://bmssystems.org/",
+            "location": ["(Online)"],
+            "duration": "June 2021 - December 2021",
+            "responsibilities": [
+                "Web Back-end Development (Laravel, MySQL)",
+                "REST APIs Development for both Web and App",
+                "Web Front-end Support (Bootstrap, JavaScript)",
+                "API Testing and Documentation",
+                "Web Server Management (CPanel)"
+            ]
+        },
+        {
+            "id": 5,
             "designation": "Full Stack Web Developer",
             "company":"Oxdora I Tech",
-            "URL": "http://oxdoraitech.com/",
+            "URL": "https://oxdoraitech.com/",
+            "location": [
+                "Niketan, Gulshan-1, Dhaka, Bangladesh",
+                "Aftabnagar, Rampura, Dhaka, Bangladesh"
+            ],
             "duration": "January 2021 - July 2021",
             "responsibilities": [
-                "Web Front-end Development",
-                "Web Back-end Development",
+                "Web Front-end Development (Bootstrap, JavaScript)",
+                "Web Back-end Development (Laravel, PHP, MySQL)",
+                "CSM Website Development (WordPress/WooCommerce)",
+                "Web Server Management (WHM & cPanel)",
                 "Project Management"
             ]
         },
         {
-            "styleData": "",
-            "designation": "Web Back-end Developer (Part-time)",
-            "company":"BMS Systems",
-            "URL": "https://bmssystems.org/",
-            "duration": "June 2021 - Present",
-            "responsibilities": [
-                "Web Back-end Development",
-                "App Back-end Development",
-                "Web Front-end Support",
-                "Generating necessary REST APIs",
-                "API Testing Documentation"
-            ]
-        },
-        {
-            "styleData": "window.innerWidth > 1199 ? { position: 'relative', top: '-103px' } : {}",
+            "id": 6,
             "designation": "Campus Ambassador",
             "company":"Creative It Institute",
             "URL": "https://creativeitinstitute.com/",
+            "location": [
+                "Momtaz Plaza, Dhanmondi, Dhaka, Bangladesh",
+                "Meher Plaza, Dhanmondi, Dhaka, Bangladesh",
+                "Azampur Bus Stand, Uttara, Dhaka, Bangladesh",
+                "Chawk Bazar, Chattogram, Bangladesh"
+            ],
             "duration": "January 2020 - January 2021",
             "responsibilities": [
                 "Let everyone know about the importance and benefits of IT courses",

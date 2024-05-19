@@ -6,24 +6,33 @@
                         Professional Experiences
                     </h1>
                     <div class="row pt-5">
-                        <div class="col-lg-12 col-xl-6" v-for="exp in experiences" :key="exp">
-                            <div class="hb-work">
-                                <div class="hb-experience-deatils">
-                                    <!-- Workplace-->
-                                    <div class="hb-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                                        <h4>{{ exp.designation }} @ <a :href="exp.URL">{{ exp.company }}</a></h4>
-                                        <div class="hb-eduyear">{{ exp.duration }}</div>
-                                        <span>Responsibilities :</span>
-                                        <ul class="work-responsibility">
-                                            <li v-for="li in exp.responsibilities" :key="li">
-                                                <i class="fa fa-circle"></i>
-                                                {{ li }}
-                                            </li>
-                                        </ul>
+                        <masonry-wall :items="experiences" :ssr-columns="1" :max-columns="2" :column-width="500" :gap="16">
+                            <template v-slot:default="{ item }">
+                                <div class="grid-item  user-interface" :style="{ order: item.id }">
+                                    <div class="hb-work">
+                                        <div class="hb-experience-deatils">
+                                            <!-- Workplace-->
+                                            <div class="hb-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
+                                                <h4>{{ item.designation }} @ <a :href="item.URL">{{ item.company }}</a></h4>
+                                                <ul class="company-location">
+                                                    <li v-for="li in item.location" :key="li">
+                                                        {{ li }}
+                                                    </li>
+                                                </ul>
+                                                <div class="hb-eduyear">{{ item.duration }}</div>
+                                                <span>Responsibilities :</span>
+                                                <ul class="work-responsibility">
+                                                    <li v-for="li in item.responsibilities" :key="li">
+                                                        <i class="fa fa-circle"></i>
+                                                        {{ li }}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </template>
+                        </masonry-wall>
                     </div>
                 </div>
             </div>
@@ -31,9 +40,18 @@
 </template>
 
 <script>
+import MasonryWall from '@yeger/vue-masonry-wall'
+import { createApp } from 'vue'
 import axios from 'axios';
 
+const app = createApp()
+
+app.use(MasonryWall)
+
 export default {
+    components: {
+        MasonryWall,
+    },
     data() {
         return {
             experiences: []
@@ -55,3 +73,13 @@ export default {
     }
 };
 </script>
+
+<style scoped>
+
+.company-location {
+    font-size: 12px;
+    line-height: 20px;
+    font-style: italic;
+}
+
+</style>
