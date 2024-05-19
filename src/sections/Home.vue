@@ -44,18 +44,18 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com/hridoy_alamin">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://github.com/HRIDOY-BUZZ">
-                                        <i class="fab fa-github"></i>
+                                    <a href="https://x.com/hridoy_alamin">
+                                        <span class="fab">&#x1D54F;</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://www.linkedin.com/in/al-amin-islam-hridoy/">
                                         <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/HRIDOY-BUZZ">
+                                        <i class="fab fa-github"></i>
                                     </a>
                                 </li>
                             </ul>
