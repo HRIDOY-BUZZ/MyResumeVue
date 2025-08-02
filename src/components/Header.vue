@@ -53,9 +53,9 @@ export default {
                             <li class="nav-item" :class="{ active: isCurrentPage('/experiences') }">
                                 <router-link to="/experiences" @click="toggleMenu" class="nav-link">Professional Experiences</router-link>
                             </li>
-                            <li class="nav-item" :class="{ active: isCurrentPage('/portfolio') }">
+                            <!-- <li class="nav-item" :class="{ active: isCurrentPage('/portfolio') }">
                                 <router-link to="/portfolio" @click="toggleMenu" class="nav-link">My Portfolio</router-link>
-                            </li>
+                            </li> -->
                             <li class="nav-item" :class="{ active: isCurrentPage('/contact') }">
                                 <router-link to="/contact" @click="toggleMenu" class="nav-link">Contact Me</router-link>
                             </li>

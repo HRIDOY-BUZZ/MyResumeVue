@@ -40,7 +40,13 @@
         },
         {
             "delay": "0.7s",
-            "icon": "fas fa-server green-color",
+            "icon": "fab fa-shopify green-color",
+            "title": "Shopify",
+            "description": "Building Shopify stores with custom themes and custom apps to meet your specific requirements. From design to development, ensuring seamless performance and user experience."
+        },
+        {
+            "delay": "0.7s",
+            "icon": "fas fa-server purple-color",
             "title": "Server Management",
             "description": "Expert in managing Linux servers via SSH and also using CPanel & WHM. Proficient in deploying, configuring, manageing database and maintaining servers to ensure optimal performance, security, and reliability."
         }
@@ -54,14 +60,17 @@
                 { "id": 4, "name": "Creativity", "percent": 90 }
             ],
             "TSkills": [
+                { "id": 4, "name": "Shopify Liquid", "percent": 78 },
+                { "id": 4, "name": "Shopify Apps", "percent": 77 },
                 { "id": 1, "name": "Laravel", "percent": 77 },
                 { "id": 2, "name": "PHP", "percent": 86 },
                 { "id": 3, "name": "MySQL", "percent": 82 },
-                { "id": 4, "name": "Shopify", "percent": 74 },
-                { "id": 5, "name": "WordPress", "percent": 74 },
+                { "id": 3, "name": "API (REST/GraphQL)", "percent": 80 },
+                { "id": 5, "name": "WordPress", "percent": 70 },
+                { "id": 5, "name": "WP Plugins", "percent": 65 },
                 { "id": 6, "name": "Vue.Js", "percent": 55 },
+                { "id": 8, "name": "Alpine Js", "percent": 70 },
                 { "id": 7, "name": "Vanilla Javascript", "percent": 75 },
-                { "id": 8, "name": "HTML", "percent": 90 },
                 { "id": 9, "name": "CSS / Bootstrap", "percent": 88 },
                 { "id": 10, "name": "C / C++", "percent": 88 },
                 { "id": 11, "name": "C#", "percent": 47 },
@@ -158,14 +167,14 @@
                 "Dhanmondi, Dhaka Bangladesh.",
                 "Muradpur, Chattagram, Bangladesh."
             ],
-            "duration": "December 2023 - Present",
+            "duration": "December 2023 - August 2025",
             "responsibilities": [
                 "Shopify Theme Development (Liquid)",
-                "Shopify App Development (Laravel, MySQL, REST API)",
+                "Shopify App Development (Laravel, MySQL, GraphQL API)",
                 "A/B Testing Variation Development (Vanilla Js)",
                 "Web Front-end Development (Bootstrap, Vanilla Js)",
                 "Web Backend Development (Laravel, MySQL)",
-                "Managing Web Servers (AWS, CyberPanel)"
+                "Managing Web Servers (AWS, CyberPanel, aaPanel)"
             ]
         },
         {
@@ -173,7 +182,7 @@
             "designation": "Project Manager (Part-time)",
             "company":"eBuzz-IT",
             "URL": "https://ebuzz-it.com/",
-            "location": ["(Online)"],
+            "location": ["(Online / Remote)"],
             "duration": "October 2021 - Present",
             "responsibilities": [
                 "Project Planning and Estimations",
@@ -208,7 +217,7 @@
             "designation": "Web Back-end Developer (Part-time)",
             "company":"BMS Systems",
             "URL": "https://bmssystems.org/",
-            "location": ["(Online)"],
+            "location": ["(Online / Remote)"],
             "duration": "June 2021 - December 2021",
             "responsibilities": [
                 "Web Back-end Development (Laravel, MySQL)",

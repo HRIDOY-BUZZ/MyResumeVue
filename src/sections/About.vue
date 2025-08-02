@@ -14,10 +14,9 @@
                     <div class="hb-about-inner">
                         <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">About Me</h2>
                         <p class="wow fadeInUp text-justified" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                            I am a full-stack Web Developer (Laravel/PHP), having 2+ years of hands-on
+                            I am a full-stack Web Developer (Shopify/Laravel/PHP/JS), having 4+ years of hands-on
                             experience in both front-end designing and back-end development. Familiar with all
-                            stages of the development cycle for dynamic web projects. Currently looking for a
-                            place where I can learn more and grow.
+                            stages of the development cycle for dynamic web projects.
                         </p>
                         <div class="hb-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                             <ul>
