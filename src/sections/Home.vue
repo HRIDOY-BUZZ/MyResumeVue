@@ -39,7 +39,7 @@
                             
                             <ul class="social-icon wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
                                 <li>
-                                    <a href="https://www.facebook.com/hridoy.al.amin.6/">
+                                    <a href="https://www.facebook.com/alaminislam.hridoy.9/">
                                         <i class="fab fa-facebook"></i>
                                     </a>
                                 </li>

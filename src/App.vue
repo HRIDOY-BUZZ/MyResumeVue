@@ -9,7 +9,9 @@
   <atom-spinner v-if="loading" :size="150" color="#0bceaf" />
   <template v-else>
     <Header />
-    <Body />
+    <main class="main-content">
+      <Body />
+    </main>
     <Footer />
   </template>
 </template>
@@ -32,6 +34,15 @@
 </script>
 
 <style>
+  #app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .main-content {
+    flex: 1;
+  }
   .atom-spinner{
     position:absolute;
     margin-top: 40vh;

@@ -16,32 +16,32 @@ const routes = [
     },
     {
         path: '/about',
-        name: 'About',
+        name: 'About Me',
         component: About
     },
     {
         path: '/services',
-        name: 'Services',
+        name: 'My Services',
         component: Services
     },
     {
         path: '/skills',
-        name: 'Skills',
+        name: 'My Skills & Abilities',
         component: Skills
     },
     {
         path: '/interests',
-        name: 'Interests',
+        name: 'My Personal Interests',
         component: Interests
     },
     {
         path: '/education',
-        name: 'Education',
+        name: 'My Education Background',
         component: Education
     },
     {
         path: '/experiences',
-        name: 'Experiences',
+        name: 'My Professional Experiences',
         component: Experiences
     },
     {
@@ -51,7 +51,7 @@ const routes = [
     },
     {
         path: '/contact',
-        name: 'Contact',
+        name: 'Contact Me',
         component: Contact
     }
 ]

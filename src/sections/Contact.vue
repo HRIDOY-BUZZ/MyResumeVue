@@ -5,7 +5,7 @@
                 <h1 class="text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
                     Contact Me
                 </h1>
-                <div class="row pt-5">
+                <div class="row pt-5 px-2">
                     <!-- 
                     ====================
                         Contact Form
