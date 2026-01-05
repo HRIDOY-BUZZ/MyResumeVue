@@ -1,4 +1,20 @@
 {
+    "home": {
+        "name": "Al-Amin Islam Hridoy",
+        "title": "Full-stack Software Engineer",
+        "description": "",
+        "image": "/assets/images/hridoy.webp",
+        "email": "hridoy.usw25@gmail.com",
+        "email2": "alaminislamhridoy@gmail.com",
+        "phone": "+447469443042",
+        "address": "Cardiff, United Kingdom"
+    },
+    "social": {
+        "facebook": "https://www.facebook.com/alaminislam.hridoy.9/",
+        "twitter": "https://x.com/hridoy_alamin",
+        "linkedin": "https://www.linkedin.com/in/al-amin-islam-hridoy/",
+        "github": "https://github.com/HRIDOY-BUZZ"
+    },
     "about": [
         { "skill": "Laravel" },
         { "skill": "Core PHP" },
@@ -8,10 +24,10 @@
         { "skill": "Vue Js" },
         { "skill": "Alpine Js" },
         { "skill": "Bootstrap" },
-        { "skill": "Linux" },
+        { "skill": "AWS Console" },
+        { "skill": "Linux Servers" },
         { "skill": "WHM & cPanel" },
-        { "skill": "CyberPanel" },
-        { "skill": "AWS" }
+        { "skill": "CyberPanel & aaPanel" }
     ],
     "services": [
         {
@@ -77,7 +93,7 @@
                 { "id": 12, "name": "Java", "percent": 55 },
                 { "id": 13, "name": "Python", "percent": 45 },
                 { "id": 14, "name": "Linux", "percent": 81 },
-                { "id": 15, "name": "Web Server", "percent": 75 }
+                { "id": 15, "name": "AWS", "percent": 70 }
             ],
             "ESkills": [
                 { "id": 1, "name": "Adobe Photoshop", "percent": 79 },
@@ -117,11 +133,19 @@
     ],
     "education": [
         {
+            "degree": "Master of Science (MSc)",
+            "institution": "University of South Wales",
+            "institutionUrl": "https://www.southwales.ac.uk/",
+            "department": "Computing and Information Systems",
+            "year": "2025 - Present (Running)",
+            "campus": ["Treforest Campus, Pontypridd, Wales, UK"]
+        },
+        {
             "degree": "Bachelor of Science (BSc)",
             "institution": "East West University",
             "institutionUrl": "https://ewubd.edu/",
             "department": "Department of Computer Science and Engineering",
-            "year": "2016-2020",
+            "year": "2016 - 2020",
             "campus": ["A/2, Jahurul Islam Avenue, Jahurul Islam City, Aftabnagar, Dhaka-1212, Bangladesh"]
         },
         {
@@ -129,7 +153,7 @@
             "institution": "Govt. Science College (Dhaka Board)",
             "institutionUrl": "http://gsctd.edu.bd/en/",
             "department": "Group: Science",
-            "year": "2013-2015",
+            "year": "2013 - 2015",
             "campus": ["34/B Farmgate - Tejturi Bazar Rd, Tejgaon, Dhaka-1215, Bangladesh"]
         },
         {
@@ -137,7 +161,7 @@
             "institution": "Motijheel Model School & College (Dhaka Board)",
             "institutionUrl": "https://www.motijheelmodelschoolandcollege.edu.bd/",
             "department": "Group: Science",
-            "year": "2011-2013",
+            "year": "2011 - 2013",
             "campus": [
                 "Kamalapur Road, Motijheel, Dhaka-1000, Bangladesh",
                 "Atish Dipankar Road, Bashabo, Shabujbag, Dhaka-1214, Bangladesh"
@@ -167,7 +191,7 @@
                 "Dhanmondi, Dhaka Bangladesh.",
                 "Muradpur, Chattagram, Bangladesh."
             ],
-            "duration": "December 2023 - August 2025",
+            "duration": "December 2023 - September 2025",
             "responsibilities": [
                 "Shopify Theme Development (Liquid)",
                 "Shopify App Development (Laravel, MySQL, GraphQL API)",

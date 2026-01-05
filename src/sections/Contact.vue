@@ -58,7 +58,7 @@
                                     <div class="each-info">
                                         <h4>Address</h4>
                                         <address>
-                                            Madartek, Bashabo, Shabujbag, Dhaka-1214, Bangladesh.
+                                            Cardiff, United Kingdom
                                         </address>
                                     </div>
                                 </div>
@@ -70,8 +70,7 @@
                                     </div>
                                     <div class="each-info">
                                         <h4>Email</h4>
-                                        <a href="mailto:hridoy.ewu16@email.com">hridoy.ewu16@gmail.com</a><br>
-                                        <a href="mailto:alaminislamhridoy@email.com">alaminislamhridoy@gmail.com</a>
+                                        <a href="mailto:hridoy.usw25@gmail.com">hridoy.usw25@gmail.com</a><br>
                                     </div>
                                 </div>
                             </div>

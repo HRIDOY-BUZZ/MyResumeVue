@@ -10,51 +10,51 @@
                             </div>
                             
                             <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                                Al-Amin Islam Hridoy
+                                {{ home_data.name }}
                             </h2>
                             <h4 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                                Full-stack Web Developer
+                                {{ home_data.title }}
                             </h4>
                             
                             <ul>
                                 <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
                                     <i class="fa fa-envelope"></i>
-                                    <a href="mailto:hridoy.ewu16@gmail.com">
-                                        hridoy.ewu16@gmail.com
+                                    <a href="mailto:{{ home_data.email }}">
+                                        {{ home_data.email }}
                                     </a>
                                 </li>
                                 <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
                                     <i class="fa fa-phone"></i>
-                                    <a href="callto:+8801521326125">
-                                        +880 1521 326125
+                                    <a href="callto:{{ home_data.phone }}">
+                                        {{ home_data.phone }}
                                     </a>
                                 </li>
                                 <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
                                     <i class="fa fa-map-marker"></i>
                                     <address>
-                                        Madartek, Bashabo, Dhaka, Bangladesh
+                                        {{ home_data.address }}
                                     </address>
                                 </li>
                             </ul>
                             
                             <ul class="social-icon wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
                                 <li>
-                                    <a href="https://www.facebook.com/alaminislam.hridoy.9/">
+                                    <a href="{{ social_data.facebook }}">
                                         <i class="fab fa-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://x.com/hridoy_alamin">
+                                    <a href="{{ social_data.twitter }}">
                                         <span class="fab">&#x1D54F;</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.linkedin.com/in/al-amin-islam-hridoy/">
+                                    <a href="{{ social_data.linkedin }}">
                                         <i class="fab fa-linkedin"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://github.com/HRIDOY-BUZZ">
+                                    <a href="{{ social_data.github }}">
                                         <i class="fab fa-github"></i>
                                     </a>
                                 </li>
@@ -64,7 +64,7 @@
                     <div class="col-sm-6">
                         <div class="hero-img wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
                             <div class="img-border">
-                                <img src="/assets/images/hridoy.webp" alt="Al-Amin islam Hridoy"  class="img-fluid" loading="lazy">
+                                <img :src="home_data.image" :alt="home_data.name" class="img-fluid" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -73,3 +73,26 @@
         </div>
     </main>
 </template>
+
+<script>
+import axios from 'axios';
+
+export default {
+    data() {
+        return {
+            home_data: [],
+            social_data: []
+        };
+    },
+    created() {
+        axios.get('/data/data.json')
+            .then(response => {
+                this.home_data = response.data.home;
+                this.social_data = response.data.social;
+            })
+            .catch(error => {
+                console.error('Error loading home data:', error);
+            });
+    }
+};
+</script>
