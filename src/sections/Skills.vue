@@ -7,7 +7,7 @@ const skillsData = inject('skillsData');
 
 const PSkills = computed(() => skillsData.value.PSkills || []);
 const TSkills = computed(() => skillsData.value.TSkills || []);
-const ESkills = computed(() => skillsData.value.ESkills || []);
+// const ESkills = computed(() => skillsData.value.ESkills || []);
 </script>
 
 <template>
@@ -38,7 +38,7 @@ const ESkills = computed(() => skillsData.value.ESkills || []);
                     </div>
                 </div>
 
-                <div class="row">
+                <!-- <div class="row">
                     <div class="section-title text-center col-sm-12">
                         <h3>Extra Skills</h3>
                     </div>
@@ -61,7 +61,7 @@ const ESkills = computed(() => skillsData.value.ESkills || []);
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="row section-separator">
                     <div class="section-title text-center col-sm-12">
                         <h3>Professional Skills</h3>
