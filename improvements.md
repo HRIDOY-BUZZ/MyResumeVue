@@ -2,43 +2,30 @@
 
 This document outlines identified bad practices in the project and provides recommendations for improvement. The core issue stems from a partial migration from a legacy jQuery/Bootstrap architecture to Vue 3, resulting in a conflicting and inefficient hybrid system.
 
-## 1. Legacy Architecture & jQuery Conflicts
+## 1. Legacy Asset Loading
 
-*   **Bad Practice:** The project relies on a legacy jQuery script (`public/assets/js/primary.js`) that directly manipulates the DOM. This script's scroll handler for the navigation bar (`Header.vue`) conflicts with Vue's component-based rendering and state management.
-
-*   **Solution:**
-    *   **Eliminate jQuery:** Remove the dependency on jQuery entirely.
-    *   **Refactor in Vue:** Re-implement the scroll-based navigation bar styling directly within `Header.vue`. Use Vue's `onMounted` lifecycle hook to add a scroll event listener and a reactive variable to toggle the necessary CSS classes.
-
-## 2. Improper Asset Management
-
-*   **Bad Practice:** All CSS and JavaScript assets, including Bootstrap and jQuery, are loaded directly in `index.html` via `<link>` and `<script>` tags. This completely bypasses the Vite build process, leading to a lack of bundling, code optimization, and proper dependency management.
+*   **Bad Practice:** The most critical issue is the manual loading of CSS and JavaScript (including jQuery) in `index.html`. This bypasses the Vite build process, preventing bundling, minification, and optimization. It also creates conflicts with Vue's DOM management.
 
 *   **Solution:**
-    *   **Embrace Vite:** Remove all asset-loading `<link>` and `<script>` tags from `index.html`.
-    *   **Manage Dependencies with npm:** Install necessary libraries (e.g., Bootstrap CSS) via npm (`npm install bootstrap`).
-    *   **Import in `main.js`:** Import the bundled assets in the application's entry point (`src/main.js`) to allow Vite to process and optimize them (e.g., `import 'bootstrap/dist/css/bootstrap.min.css';`).
+    *   **Embrace Vite for Asset Bundling:** All assets should be installed via npm (e.g., `npm install bootstrap`) and then imported into the `src` directory (e.g., in `src/main.js`). This allows Vite to handle them correctly.
+    *   **Replace Legacy Scripts:** The jQuery-dependent scripts (`primary.js`, `wow.js`, `jquery.fancybox.min.js`) should be removed. Their functionality can be replaced with modern, Vue-native libraries or browser APIs (e.g., Vue's `<transition>` component, the Intersection Observer API for scroll effects).
 
+## 2. Inefficient Data Fetching & State Management
 
-
-## 4. Dead & Redundant Code
-
-*   **Bad Practice:**
-    1.  **Unused Dependency:** The `http-proxy-middleware` package is listed as a dependency but is not used in the Vite configuration or anywhere else.
-    2.  **Dead jQuery Code:** The progress bar logic in `primary.js` is obsolete. The `Skills.vue` component correctly implements this feature using Vue's data binding.
-    3.  **Artificial Loader:** `App.vue` contains an unnecessary `setTimeout` that artificially delays the application load time by 2 seconds, worsening the user experience.
+*   **Bad Practice:** The root `App.vue` component fetches all application data from a single JSON file in one monolithic request. It then uses the `provide`/`inject` API to pass this data down the component tree. This is not scalable and can lead to performance bottlenecks. Additionally, an artificial 2-second loading delay is enforced via `setTimeout`, which harms user experience.
 
 *   **Solution:**
-    *   **Clean Up `package.json`:** Remove the `http-proxy-middleware` dependency.
-    *   **Remove Dead Code:** Delete the `public/assets/js/primary.js` file and the artificial loading logic from `App.vue`.
+    *   **Adopt a Proper State Management Library:** Replace the `provide`/`inject` pattern with a dedicated state management library like Pinia. This provides a more organized, maintainable, and scalable way to manage global application state.
+    *   **Remove Artificial Delays:** The `setTimeout` loader in `App.vue` should be removed. Loading indicators should be tied to the actual data fetching process.
+    *   **Consider Granular Data Fetching:** Instead of one large data fetch, consider fetching data on a per-route or per-component basis as needed.
 
-## 5. Lack of Code Quality Tooling
 
-*   **Bad Practice:** The project lacks any automated tools for linting (like ESLint) or code formatting (like Prettier). This leads to inconsistent code style and makes it easier to introduce simple bugs.
+## 4. Unused Dependencies & Dead Code
+
+*   **Bad Practice:** The project contains unused dependencies and commented-out code. For example, the `http-proxy-middleware` package is listed in `package.json` but is not used.
 
 *   **Solution:**
-    *   **Integrate Tooling:** Add ESLint and Prettier to the project.
-    *   **Configure Rules:** Configure them with standard Vue 3 style guides.
-    *   **Automate:** Add npm scripts to run the linter and formatter automatically.
+    *   **Clean Up `package.json`:** Remove any unused dependencies to reduce the project's size and complexity.
+    *   **Remove Dead Code:** Remove any commented-out code and unused files from the project to improve readability and maintainability.
 
 By addressing these issues, the project will be more robust, maintainable, performant, and aligned with modern web development best practices.

@@ -1,58 +1,49 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from './sections/Home.vue';
-import About from './sections/About.vue';
-import Services from './sections/Services.vue';
-import Skills from './sections/Skills.vue';
-import Interests from './sections/Interests.vue';
-import Education from './sections/Education.vue';
-import Experiences from './sections/Experiences.vue';
-import Contact from './sections/Contact.vue';
-import Portfolio from './sections/Portfolio.vue';
 const routes = [
     {
         path: '/',
         name: 'Home',
-        component: Home
+        component: () => import('./sections/Home.vue')
     },
     {
         path: '/about',
         name: 'About Me',
-        component: About
+        component: () => import('./sections/About.vue')
     },
     {
         path: '/services',
         name: 'My Services',
-        component: Services
+        component: () => import('./sections/Services.vue')
     },
     {
         path: '/skills',
         name: 'My Skills & Abilities',
-        component: Skills
+        component: () => import('./sections/Skills.vue')
     },
     {
         path: '/interests',
         name: 'My Personal Interests',
-        component: Interests
+        component: () => import('./sections/Interests.vue')
     },
     {
         path: '/education',
         name: 'My Education Background',
-        component: Education
+        component: () => import('./sections/Education.vue')
     },
     {
         path: '/experiences',
         name: 'My Professional Experiences',
-        component: Experiences
+        component: () => import('./sections/Experiences.vue')
     },
     {
         path: '/portfolio',
         name: 'Portfolio',
-        component: Portfolio
+        component: () => import('./sections/Portfolio.vue')
     },
     {
         path: '/contact',
         name: 'Contact Me',
-        component: Contact
+        component: () => import('./sections/Contact.vue')
     }
 ]
 
