@@ -36,11 +36,6 @@ const routes = [
         component: () => import('./sections/Experiences.vue')
     },
     {
-        path: '/portfolio',
-        name: 'Portfolio',
-        component: () => import('./sections/Portfolio.vue')
-    },
-    {
         path: '/contact',
         name: 'Contact Me',
         component: () => import('./sections/Contact.vue')

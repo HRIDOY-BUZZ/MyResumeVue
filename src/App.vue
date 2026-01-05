@@ -13,7 +13,6 @@ const socialData = ref({});
 const aboutData = ref([]);
 const skillsData = ref({});
 const servicesData = ref([]);
-const portfolioData = ref([]);
 const interestsData = ref([]);
 const experiencesData = ref([]);
 const educationData = ref([]);
@@ -23,7 +22,6 @@ provide('socialData', socialData);
 provide('aboutData', aboutData);
 provide('skillsData', skillsData);
 provide('servicesData', servicesData);
-provide('portfolioData', portfolioData);
 provide('interestsData', interestsData);
 provide('experiencesData', experiencesData);
 provide('educationData', educationData);
@@ -42,7 +40,6 @@ onMounted(async () => {
             ESkills: skills.ESkills,
         }
         servicesData.value = data.services;
-        portfolioData.value = data.projects;
         interestsData.value = data.interests;
         experiencesData.value = data.experiences;
         educationData.value = data.education;
