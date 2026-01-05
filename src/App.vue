@@ -1,8 +1,16 @@
 <script setup>
-  import Header from './components/Header.vue'
-  import Body from './components/Body.vue'
-  import Footer from './components/Footer.vue'
-  import { AtomSpinner } from 'epic-spinners'
+  import { ref, onMounted } from 'vue';
+  import Header from './components/Header.vue';
+  import Body from './components/Body.vue';
+  import Footer from './components/Footer.vue';
+  import { AtomSpinner } from 'epic-spinners';
+
+  const loading = ref(true);
+
+  onMounted(async () => {
+    await new Promise((r) => setTimeout(r, 2000));
+    loading.value = false;
+  });
 </script>
 
 <template>
@@ -15,23 +23,6 @@
     <Footer />
   </template>
 </template>
-
-<script>
-  export default {
-    data() {
-      return {
-        loading: true
-      }
-    },
-    components: {
-      AtomSpinner,
-    },
-    async mounted() {
-      await new Promise((r) => setTimeout(r, 2000));
-      this.loading = false
-    }
-  }
-</script>
 
 <style>
   #app {

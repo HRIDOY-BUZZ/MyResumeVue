@@ -1,3 +1,22 @@
+<script setup>
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
+
+const home_data = ref({});
+const social_data = ref({});
+
+onMounted(() => {
+    axios.get('/data/data.json')
+        .then(response => {
+            home_data.value = response.data.home;
+            social_data.value = response.data.social;
+        })
+        .catch(error => {
+            console.error('Error loading home data:', error);
+        });
+});
+</script>
+
 <template>
     <main class="hb-home" id="hb-home">
         <div class="home-ovimg">
@@ -19,13 +38,13 @@
                             <ul>
                                 <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
                                     <i class="fa fa-envelope"></i>
-                                    <a href="mailto:{{ home_data.email }}">
+                                    <a :href="'mailto:' + home_data.email">
                                         {{ home_data.email }}
                                     </a>
                                 </li>
                                 <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
                                     <i class="fa fa-phone"></i>
-                                    <a href="callto:{{ home_data.phone }}">
+                                    <a :href="'callto:' + home_data.phone">
                                         {{ home_data.phone }}
                                     </a>
                                 </li>
@@ -39,22 +58,22 @@
                             
                             <ul class="social-icon wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
                                 <li>
-                                    <a href="{{ social_data.facebook }}">
+                                    <a :href="social_data.facebook">
                                         <i class="fab fa-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ social_data.twitter }}">
+                                    <a :href="social_data.twitter">
                                         <span class="fab">&#x1D54F;</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ social_data.linkedin }}">
+                                    <a :href="social_data.linkedin">
                                         <i class="fab fa-linkedin"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ social_data.github }}">
+                                    <a :href="social_data.github">
                                         <i class="fab fa-github"></i>
                                     </a>
                                 </li>
@@ -73,26 +92,3 @@
         </div>
     </main>
 </template>
-
-<script>
-import axios from 'axios';
-
-export default {
-    data() {
-        return {
-            home_data: [],
-            social_data: []
-        };
-    },
-    created() {
-        axios.get('/data/data.json')
-            .then(response => {
-                this.home_data = response.data.home;
-                this.social_data = response.data.social;
-            })
-            .catch(error => {
-                console.error('Error loading home data:', error);
-            });
-    }
-};
-</script>

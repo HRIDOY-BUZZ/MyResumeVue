@@ -1,3 +1,20 @@
+<script setup>
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
+
+const educationData = ref([]);
+
+onMounted(() => {
+    axios.get('/data/data.json')
+        .then(response => {
+            educationData.value = response.data.education;
+        })
+        .catch(error => {
+            console.error('Error loading education data:', error);
+        });
+});
+</script>
+
 <template>
     <main class="hb-experince" id="hb-education">
             <div class="bolor-overlay">
@@ -32,24 +49,3 @@
             </div>
         </main>
 </template>
-
-<script>
-import axios from 'axios';
-
-export default {
-    data() {
-        return {
-            educationData: []
-        };
-    },
-    created() {
-        axios.get('/data/data.json')
-            .then(response => {
-                this.educationData = response.data.education;
-            })
-            .catch(error => {
-                console.error('Error loading education data:', error);
-            });
-    }
-};
-</script>

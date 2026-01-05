@@ -1,8 +1,36 @@
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+import axios from 'axios';
+import MasonryWall from '@yeger/vue-masonry-wall';
+
+const experiences = ref([]);
+const windowWidth = ref(window.innerWidth);
+
+const handleResize = () => {
+    windowWidth.value = window.innerWidth;
+};
+
+onMounted(() => {
+    axios.get('/data/data.json')
+        .then(response => {
+            experiences.value = response.data.experiences;
+        })
+        .catch(error => {
+            console.error('Error loading experiences data:', error);
+        });
+    window.addEventListener('resize', handleResize);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('resize', handleResize);
+});
+</script>
+
 <template>
     <main class="hb-experince" id="hb-experience">
             <div class="bolor-overlay">
                 <div class="container section-separator">
-                    <h1 class="text-center wow fadeInUp" :class="{ 'fs-3': window.innerWidth < 440 }" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                    <h1 class="text-center wow fadeInUp" :class="{ 'fs-3': windowWidth < 440 }" data-wow-duration="0.8s" data-wow-delay="0.2s">
                         Professional Experiences
                     </h1>
                     <div class="row pt-5">
@@ -38,41 +66,6 @@
             </div>
         </main>
 </template>
-
-<script>
-import MasonryWall from '@yeger/vue-masonry-wall'
-import { createApp } from 'vue'
-import axios from 'axios';
-
-const app = createApp()
-
-app.use(MasonryWall)
-
-export default {
-    components: {
-        MasonryWall,
-    },
-    data() {
-        return {
-            experiences: []
-        };
-    },
-    computed: {
-            window() {
-                return window;
-            }
-    },
-    created() {
-        axios.get('/data/data.json')
-            .then(response => {
-                this.experiences = response.data.experiences;
-            })
-            .catch(error => {
-                console.error('Error loading experiences data:', error);
-            });
-    }
-};
-</script>
 
 <style scoped>
 

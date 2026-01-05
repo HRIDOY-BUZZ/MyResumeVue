@@ -1,3 +1,22 @@
+<script setup>
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
+import MasonryWall from '@yeger/vue-masonry-wall';
+
+const projects = ref([]);
+
+onMounted(() => {
+    axios.get('/data/data.json')
+        .then(response => {
+            projects.value = response.data.projects;
+            console.log(projects.value);
+        })
+        .catch(error => {
+            console.error('Error loading projects data:', error);
+        });
+});
+</script>
+
 <template>
     <main class="hb-portfolio" id="hb-portfolio">
         <div class="container">
@@ -34,35 +53,3 @@
         </div>
     </main>
 </template>
-
-<script>
-
-import MasonryWall from '@yeger/vue-masonry-wall'
-import { createApp } from 'vue'
-import axios from 'axios';
-
-const app = createApp()
-
-app.use(MasonryWall)
-
-export default {
-    components: {
-        MasonryWall,
-    },
-    data() {
-        return {
-            projects: []
-        }
-    },
-    created() {
-        axios.get('/data/data.json')
-            .then(response => {
-                this.projects = response.data.projects;
-                console.log(this.projects);
-            })
-            .catch(error => {
-                console.error('Error loading projects data:', error);
-            });
-    }
-};
-</script>

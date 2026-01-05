@@ -27,7 +27,8 @@
         { "skill": "AWS Console" },
         { "skill": "Linux Servers" },
         { "skill": "WHM & cPanel" },
-        { "skill": "CyberPanel & aaPanel" }
+        { "skill": "CyberPanel" },
+        { "skill": "aaPanel" }
     ],
     "services": [
         {

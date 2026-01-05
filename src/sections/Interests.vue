@@ -1,3 +1,20 @@
+<script setup>
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
+
+const interestData = ref([]);
+
+onMounted(() => {
+    axios.get('/data/data.json')
+        .then(response => {
+            interestData.value = response.data.interests;
+        })
+        .catch(error => {
+            console.error('Error loading interests data:', error);
+        });
+});
+</script>
+
 <template>
     <main class="hb-skills" id="hb-interests">
         <div class="container">
@@ -23,27 +40,6 @@
         </div>
     </main>
 </template>
-
-<script>
-import axios from 'axios';
-
-export default {
-    data() {
-        return {
-            interestData: []
-        };
-    },
-    created() {
-        axios.get('/data/data.json')
-            .then(response => {
-                this.interestData = response.data.interests;
-            })
-            .catch(error => {
-                console.error('Error loading interests data:', error);
-            });
-    }
-};
-</script>
 
 <style scoped>
     .hb-skills-inner{

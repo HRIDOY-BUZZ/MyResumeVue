@@ -1,3 +1,27 @@
+<script setup>
+import { ref, onMounted } from 'vue';
+import "vue3-circle-progress/dist/circle-progress.css";
+import CircleProgress from "vue3-circle-progress";
+import axios from 'axios';
+
+const PSkills = ref([]);
+const TSkills = ref([]);
+const ESkills = ref([]);
+
+onMounted(() => {
+    axios.get('/data/data.json')
+        .then(response => {
+            const skills = response.data.skills[0];
+            PSkills.value = skills.PSkills;
+            TSkills.value = skills.TSkills;
+            ESkills.value = skills.ESkills;
+        })
+        .catch(error => {
+            console.error('Error loading skills data:', error);
+        });
+});
+</script>
+
 <template>
     <main class="hb-skills" id="hb-skills">
             <div class="container">
@@ -80,35 +104,6 @@
             </div>
         </main>
 </template>
-
-<script>
-import "vue3-circle-progress/dist/circle-progress.css";
-import CircleProgress from "vue3-circle-progress";
-import axios from 'axios';
-    
-export default {
-    data() {
-        return {
-            PSkills: [],
-            TSkills: [],
-            ESkills: []
-        };
-    },
-    components: {CircleProgress},
-    created() {
-        axios.get('/data/data.json')
-            .then(response => {
-                const skills = response.data.skills[0];
-                this.PSkills = skills.PSkills;
-                this.TSkills = skills.TSkills;
-                this.ESkills = skills.ESkills;
-            })
-            .catch(error => {
-                console.error('Error loading skills data:', error);
-            });
-    }
-}
-</script>
 
 <style scoped>
 

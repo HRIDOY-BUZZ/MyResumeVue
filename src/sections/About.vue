@@ -1,5 +1,19 @@
 <script setup>
-    import Services from '../sections/Services.vue'
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
+import Services from '../sections/Services.vue';
+
+const skills = ref([]);
+
+onMounted(() => {
+    axios.get('/data/data.json')
+        .then(response => {
+            skills.value = response.data.about;
+        })
+        .catch(error => {
+            console.error('Error loading about data:', error);
+        });
+});
 </script>
 <template>
     <main class="hb-about pt-5" id="hb-about">
@@ -35,24 +49,3 @@
     </main>
     <Services />
 </template>
-
-<script>
-import axios from 'axios';
-
-export default {
-    data() {
-        return {
-            skills: []
-        };
-    },
-    created() {
-        axios.get('/data/data.json')
-            .then(response => {
-                this.skills = response.data.about;
-            })
-            .catch(error => {
-                console.error('Error loading about data:', error);
-            });
-    }
-};
-</script>

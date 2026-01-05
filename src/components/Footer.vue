@@ -1,3 +1,15 @@
+<script setup>
+import { ref } from 'vue';
+import { useRoute } from 'vue-router';
+
+const year = ref(new Date().getFullYear());
+const route = useRoute();
+
+const isCurrentPage = (path) => {
+    return route.path === path;
+};
+</script>
+
 <template>
     <footer class="hb-footer" id="hb-contact">
         <div class="map-image image-bg">
@@ -41,18 +53,3 @@
         </div>
     </footer>
 </template>
-
-<script>
-    import { ref } from 'vue'
-    export default {
-        setup() {
-        const year = ref(new Date().getFullYear())
-        return { year }
-        },
-        methods: {
-            isCurrentPage(path) {
-                return this.$route.path === path;
-            },
-        },
-    }
-</script>

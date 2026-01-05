@@ -1,3 +1,20 @@
+<script setup>
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
+
+const services = ref([]);
+
+onMounted(() => {
+    axios.get('/data/data.json')
+        .then(response => {
+            services.value = response.data.services;
+        })
+        .catch(error => {
+            console.error('Error loading services data:', error);
+        });
+});
+</script>
+
 <template>
     <main class="hb-service">
             <div class="container">
@@ -16,27 +33,6 @@
             </div>
         </main>
 </template>
-
-<script>
-import axios from 'axios';
-
-export default {
-    data() {
-        return {
-            services: []
-        };
-    },
-    created() {
-        axios.get('/data/data.json')
-            .then(response => {
-                this.services = response.data.services;
-            })
-            .catch(error => {
-                console.error('Error loading services data:', error);
-            });
-    }
-};
-</script>
 
 <style scoped>
     .hb-service p{

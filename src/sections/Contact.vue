@@ -1,3 +1,65 @@
+<script setup>
+import { ref } from 'vue';
+import axios from 'axios';
+import { HollowDotsSpinner } from 'epic-spinners';
+
+const firstName = ref('');
+const lastName = ref('');
+const email = ref('');
+const messageText = ref('');
+const message = ref('');
+const loading = ref(false);
+
+const getUserData = async () => {
+    try {
+        const response = await axios.get('https://api.ipify.org?format=json');
+        return response.data.ip;
+    } catch (error) {
+        console.error(error);
+        throw new Error('Failed to fetch IP address');
+    }
+};
+
+const submitForm = async () => {
+    loading.value = true;
+    const ip = await getUserData();
+    const formData = {
+        firstName: firstName.value,
+        lastName: lastName.value,
+        email: email.value,
+        message: messageText.value,
+        ip,
+    };
+    try {
+        const response = await fetch('https://api.hridoybuzz.me/resume/submit.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+        console.log(JSON.stringify(formData));
+
+        if (response.ok) {
+            const responseMessage = await response.text();
+            message.value = responseMessage;
+        } else {
+            message.value = 'There was a problem submitting your message. Please try again.';
+        }
+    } catch (error) {
+        console.error(error);
+        message.value = 'There was a problem submitting your message. Please try again.2';
+    }
+
+    // Clear form fields
+    firstName.value = '';
+    lastName.value = '';
+    email.value = '';
+    messageText.value = '';
+    loading.value = false;
+};
+</script>
+
 <template>
     <main class="hb-footer" id="hb-contact">
         <div class="map-image image-bg">
@@ -81,76 +143,6 @@
         </div>
     </main>
 </template>
-
-<script>
-import axios from 'axios'
-import { HollowDotsSpinner } from 'epic-spinners'
-export default {
-    components: {
-        HollowDotsSpinner
-    },
-    data() {
-        return {
-            firstName: '',
-            lastName: '',
-            email: '',
-            messageText: '',
-            message: '',
-            loading: false,
-        }
-    },
-    methods: {
-        async submitForm() {
-            this.loading = true;
-            const ip = await this.getUserData();
-            const formData = {
-                firstName: this.firstName,
-                lastName: this.lastName,
-                email: this.email,
-                message: this.messageText,
-                ip,
-            }
-            try {
-                const response = await fetch('https://api.hridoybuzz.me/resume/submit.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                })
-                console.log(JSON.stringify(formData))
-
-                if (response.ok) {
-                    const message = await response.text();
-                    this.message = message;
-                } else {
-                    this.message = 'There was a problem submitting your message. Please try again.'
-                }
-            } catch (error) {
-                console.error(error)
-                this.message = 'There was a problem submitting your message. Please try again.2'
-            }
-
-            // Clear form fields
-            this.firstName = ''
-            this.lastName = ''
-            this.email = ''
-            this.messageText = ''
-            this.loading = false;
-        },
-
-        async getUserData() {
-            try {
-                const response = await axios.get('https://api.ipify.org?format=json');
-                return response.data.ip;
-            } catch (error) {
-                console.error(error);
-                throw new Error('Failed to fetch IP address');
-            }
-        }
-    },
-}
-</script>
 
 <style>
 #msgSubmit .hollow-dots-spinner{

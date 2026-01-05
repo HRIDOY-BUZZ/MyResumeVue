@@ -1,3 +1,34 @@
+<script setup>
+import { computed } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
+
+const router = useRouter();
+const route = useRoute();
+
+const routes = computed(() => {
+    // Filter out the routes that should not be in the navigation
+    const excludedRoutes = ['/portfolio', '/services'];
+    return router.options.routes.filter(r => !excludedRoutes.includes(r.path));
+});
+
+const currentPageIndex = computed(() => {
+    return routes.value.findIndex(r => r.path === route.path);
+});
+
+const isLastPage = computed(() => {
+    return currentPageIndex.value === routes.value.length - 1;
+});
+
+const nextPage = computed(() => {
+    if (isLastPage.value) {
+        return routes.value[0]; // The first page (Home)
+    } else if (currentPageIndex.value < routes.value.length - 1) {
+        return routes.value[currentPageIndex.value + 1];
+    }
+    return null;
+});
+</script>
+
 <template>
     <div class="page-navigation-container container">
       <div class="page-navigation">
@@ -7,32 +38,6 @@
       </div>
     </div>
   </template>
-  
-  <script>
-  export default {
-    computed: {
-      routes() {
-        // Filter out the routes that should not be in the navigation
-        const excludedRoutes = ['/portfolio', '/services'];
-        return this.$router.options.routes.filter(route => !excludedRoutes.includes(route.path));
-      },
-      currentPageIndex() {
-        return this.routes.findIndex(route => route.path === this.$route.path);
-      },
-      nextPage() {
-        if (this.isLastPage) {
-          return this.routes[0]; // The first page (Home)
-        } else if (this.currentPageIndex < this.routes.length - 1) {
-          return this.routes[this.currentPageIndex + 1];
-        }
-        return null;
-      },
-      isLastPage() {
-        return this.currentPageIndex === this.routes.length - 1;
-      }
-    }
-  };
-  </script>
   
   <style scoped>
   .page-navigation-container {

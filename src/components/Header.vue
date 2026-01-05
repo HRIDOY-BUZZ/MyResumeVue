@@ -1,23 +1,16 @@
-<script>
-import { RouterView, RouterLink } from 'vue-router';
+<script setup>
+import { ref } from 'vue';
+import { useRoute, RouterLink } from 'vue-router';
 
-export default {
-    data() {
-        return {
-            isMenuOpen: false
-        };
-    },
-    methods: {
-        toggleMenu() {
-            this.isMenuOpen = !this.isMenuOpen;
-        },
-        isCurrentPage(path) {
-            return this.$route.path === path;
-        },
-    },
-    components: {
-        RouterLink,
-    },
+const isMenuOpen = ref(false);
+const route = useRoute();
+
+const toggleMenu = () => {
+    isMenuOpen.value = !isMenuOpen.value;
+};
+
+const isCurrentPage = (path) => {
+    return route.path === path;
 };
 </script>
 
