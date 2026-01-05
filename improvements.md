@@ -41,13 +41,4 @@ This document outlines identified bad practices in the project and provides reco
     *   **Configure Rules:** Configure them with standard Vue 3 style guides.
     *   **Automate:** Add npm scripts to run the linter and formatter automatically.
 
-## 6. Inefficient Data Fetching
-
-*   **Bad Practice:** Multiple components (`Home`, `About`, `Skills`, etc.) independently fetch and parse the same `public/data/data.json` file on their own. This results in redundant and repeated processing, increasing memory usage and making the application less efficient, especially as it grows.
-
-*   **Solution:**
-    *   **Centralize Data Fetching:** Create a simple, reactive store to handle the data. This store will fetch `data.json` only once and make the data available globally to any component that needs it.
-    *   **Implement a Store:** A new file, `src/store.js`, can be created to manage this. It can export a reactive object that holds the portfolio data. An initialization function within the store can fetch the data and populate the state.
-    *   **Use in Components:** Components can then import the store and access the data directly without re-fetching it, ensuring a single source of truth.
-
 By addressing these issues, the project will be more robust, maintainable, performant, and aligned with modern web development best practices.
