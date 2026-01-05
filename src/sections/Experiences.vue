@@ -1,9 +1,8 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
-import axios from 'axios';
+import { ref, onMounted, onUnmounted, inject } from 'vue';
 import MasonryWall from '@yeger/vue-masonry-wall';
 
-const experiences = ref([]);
+const experiences = inject('experiencesData');
 const windowWidth = ref(window.innerWidth);
 
 const handleResize = () => {
@@ -11,13 +10,6 @@ const handleResize = () => {
 };
 
 onMounted(() => {
-    axios.get('/data/data.json')
-        .then(response => {
-            experiences.value = response.data.experiences;
-        })
-        .catch(error => {
-            console.error('Error loading experiences data:', error);
-        });
     window.addEventListener('resize', handleResize);
 });
 

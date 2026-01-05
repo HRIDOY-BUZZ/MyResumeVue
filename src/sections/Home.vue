@@ -1,20 +1,8 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import axios from 'axios';
+import { inject } from 'vue';
 
-const home_data = ref({});
-const social_data = ref({});
-
-onMounted(() => {
-    axios.get('/data/data.json')
-        .then(response => {
-            home_data.value = response.data.home;
-            social_data.value = response.data.social;
-        })
-        .catch(error => {
-            console.error('Error loading home data:', error);
-        });
-});
+const home_data = inject('homeData');
+const social_data = inject('socialData');
 </script>
 
 <template>

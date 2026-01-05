@@ -1,16 +1,58 @@
 <script setup>
-  import { ref, onMounted } from 'vue';
-  import Header from './components/Header.vue';
-  import Body from './components/Body.vue';
-  import Footer from './components/Footer.vue';
-  import { AtomSpinner } from 'epic-spinners';
+import { ref, onMounted, provide } from 'vue';
+import axios from 'axios';
+import Header from './components/Header.vue';
+import Body from './components/Body.vue';
+import Footer from './components/Footer.vue';
+import { AtomSpinner } from 'epic-spinners';
 
-  const loading = ref(true);
+const loading = ref(true);
 
-  onMounted(async () => {
-    await new Promise((r) => setTimeout(r, 2000));
-    loading.value = false;
-  });
+const homeData = ref({});
+const socialData = ref({});
+const aboutData = ref([]);
+const skillsData = ref({});
+const servicesData = ref([]);
+const portfolioData = ref([]);
+const interestsData = ref([]);
+const experiencesData = ref([]);
+const educationData = ref([]);
+
+provide('homeData', homeData);
+provide('socialData', socialData);
+provide('aboutData', aboutData);
+provide('skillsData', skillsData);
+provide('servicesData', servicesData);
+provide('portfolioData', portfolioData);
+provide('interestsData', interestsData);
+provide('experiencesData', experiencesData);
+provide('educationData', educationData);
+
+onMounted(async () => {
+    try {
+        const response = await axios.get('/data/data.json');
+        const data = response.data;
+        homeData.value = data.home;
+        socialData.value = data.social;
+        aboutData.value = data.about;
+        const skills = data.skills[0];
+        skillsData.value = {
+            PSkills: skills.PSkills,
+            TSkills: skills.TSkills,
+            ESkills: skills.ESkills,
+        }
+        servicesData.value = data.services;
+        portfolioData.value = data.projects;
+        interestsData.value = data.interests;
+        experiencesData.value = data.experiences;
+        educationData.value = data.education;
+    } catch (error) {
+        console.error('Error loading initial data:', error);
+    } finally {
+        await new Promise((r) => setTimeout(r, 2000));
+        loading.value = false;
+    }
+});
 </script>
 
 <template>

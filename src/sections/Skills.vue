@@ -1,25 +1,13 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { inject, computed } from 'vue';
 import "vue3-circle-progress/dist/circle-progress.css";
 import CircleProgress from "vue3-circle-progress";
-import axios from 'axios';
 
-const PSkills = ref([]);
-const TSkills = ref([]);
-const ESkills = ref([]);
+const skillsData = inject('skillsData');
 
-onMounted(() => {
-    axios.get('/data/data.json')
-        .then(response => {
-            const skills = response.data.skills[0];
-            PSkills.value = skills.PSkills;
-            TSkills.value = skills.TSkills;
-            ESkills.value = skills.ESkills;
-        })
-        .catch(error => {
-            console.error('Error loading skills data:', error);
-        });
-});
+const PSkills = computed(() => skillsData.value.PSkills || []);
+const TSkills = computed(() => skillsData.value.TSkills || []);
+const ESkills = computed(() => skillsData.value.ESkills || []);
 </script>
 
 <template>

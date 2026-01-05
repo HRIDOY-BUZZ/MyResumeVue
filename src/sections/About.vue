@@ -1,20 +1,10 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import axios from 'axios';
+import { inject } from 'vue';
 import Services from '../sections/Services.vue';
 
-const skills = ref([]);
-
-onMounted(() => {
-    axios.get('/data/data.json')
-        .then(response => {
-            skills.value = response.data.about;
-        })
-        .catch(error => {
-            console.error('Error loading about data:', error);
-        });
-});
+const skills = inject('aboutData');
 </script>
+
 <template>
     <main class="hb-about pt-5" id="hb-about">
         <div class="container">

@@ -1,20 +1,8 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import axios from 'axios';
+import { inject } from 'vue';
 import MasonryWall from '@yeger/vue-masonry-wall';
 
-const projects = ref([]);
-
-onMounted(() => {
-    axios.get('/data/data.json')
-        .then(response => {
-            projects.value = response.data.projects;
-            console.log(projects.value);
-        })
-        .catch(error => {
-            console.error('Error loading projects data:', error);
-        });
-});
+const projects = inject('portfolioData');
 </script>
 
 <template>

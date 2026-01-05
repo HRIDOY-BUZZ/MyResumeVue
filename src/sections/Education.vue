@@ -1,18 +1,7 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import axios from 'axios';
+import { inject } from 'vue';
 
-const educationData = ref([]);
-
-onMounted(() => {
-    axios.get('/data/data.json')
-        .then(response => {
-            educationData.value = response.data.education;
-        })
-        .catch(error => {
-            console.error('Error loading education data:', error);
-        });
-});
+const educationData = inject('educationData');
 </script>
 
 <template>

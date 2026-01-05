@@ -1,18 +1,7 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import axios from 'axios';
+import { inject } from 'vue';
 
-const interestData = ref([]);
-
-onMounted(() => {
-    axios.get('/data/data.json')
-        .then(response => {
-            interestData.value = response.data.interests;
-        })
-        .catch(error => {
-            console.error('Error loading interests data:', error);
-        });
-});
+const interestData = inject('interestsData');
 </script>
 
 <template>
