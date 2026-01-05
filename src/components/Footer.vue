@@ -1,9 +1,12 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, inject } from 'vue';
 import { useRoute } from 'vue-router';
 
 const year = ref(new Date().getFullYear());
 const route = useRoute();
+
+const homeData = inject('homeData');
+const socialData = inject('socialData');
 
 const isCurrentPage = (path) => {
     return route.path === path;
@@ -19,28 +22,28 @@ const isCurrentPage = (path) => {
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="text-left text-xs-center">
-                                    <p>Copyright <i class="far fa-copyright"></i> {{ year }} <a href="#"> Al-Amin Islam Hridoy</a></p>
+                                    <p>Copyright <i class="far fa-copyright"></i> {{ year }} <a href="#"> {{ homeData.name }}</a></p>
                                 </div>
                             </div>
                             <div v-if="!isCurrentPage('/')" class="col-sm-6 text-center">
                                 <ul class="social-icon">
                                     <li>
-                                        <a href="https://www.facebook.com/hridoy.al.amin.6/">
+                                        <a :href="socialData.facebook">
                                             <i class="fab fa-facebook"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://x.com/hridoy_alamin">
+                                        <a :href="socialData.twitter">
                                             <span class="fab">&#x1D54F;</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://github.com/HRIDOY-BUZZ">
+                                        <a :href="socialData.github">
                                             <i class="fab fa-github"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.linkedin.com/in/al-amin-islam-hridoy/">
+                                        <a :href="socialData.linkedin">
                                             <i class="fab fa-linkedin"></i>
                                         </a>
                                     </li>
