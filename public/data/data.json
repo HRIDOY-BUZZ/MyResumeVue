@@ -15,59 +15,65 @@
         "linkedin": "https://www.linkedin.com/in/al-amin-islam-hridoy/",
         "github": "https://github.com/HRIDOY-BUZZ"
     },
-    "about": [
-        { "skill": "Laravel" },
-        { "skill": "Core PHP" },
-        { "skill": "MySQL" },
-        { "skill": "Shopify" },
-        { "skill": "Wordpress" },
-        { "skill": "Vue Js" },
-        { "skill": "Alpine Js" },
-        { "skill": "Bootstrap" },
-        { "skill": "AWS Console" },
-        { "skill": "Linux Servers" },
-        { "skill": "WHM & cPanel" },
-        { "skill": "CyberPanel" },
-        { "skill": "aaPanel" }
-    ],
-    "services": [
-        {
-            "delay": "0.3s",
-            "icon": "fas fa-code purple-color",
-            "title": "Web Frontend Development",
-            "description": "Creating beautiful websites with responsive user interfaces and stunning designs using HTML, CSS, Bootstrap, and Vue.js. Designing and developing front-end solutions that deliver a great user experience."
-        },
-        {
-            "delay": "0.3s",
-            "icon": "fab fa-laravel iron-color",
-            "title": "Web Backend Development",
-            "description": "Building Smart and Stunning Websites from big to small with dynamic features and functionalities using PHP and Laravel. Also ensuring the necessary optimizations for performance and reliability to deliver seamless experience"
-        },
-        {
-            "delay": "0.3s",
-            "icon": "fas fa-object-ungroup yellow-color",
-            "title": "Web Application Development",
-            "description": "Crafting impactful and functional web applications and software using PHP, Laravel, and MySQL. Utilizing best practices for optimal performance and scalability to provide a seamless user experience."
-        },
-        {
-            "delay": "0.7s",
-            "icon": "fab fa-wordpress sky-color",
-            "title": "Wordpress",
-            "description": "Crafting bespoke WordPress websites with custom themes and plugins to cater to your specific requirements and needs. From design to deployment, ensuring seamless performance and user experience."
-        },
-        {
-            "delay": "0.7s",
-            "icon": "fab fa-shopify green-color",
-            "title": "Shopify",
-            "description": "Building Shopify stores with custom themes and custom apps to meet your specific requirements. From design to development, ensuring seamless performance and user experience."
-        },
-        {
-            "delay": "0.7s",
-            "icon": "fas fa-server purple-color",
-            "title": "Server Management",
-            "description": "Expert in managing Linux servers via SSH and also using CPanel & WHM. Proficient in deploying, configuring, manageing database and maintaining servers to ensure optimal performance, security, and reliability."
-        }
-    ],
+    "about": {
+        "name": "Al-Amin Islam Hridoy",
+        "description": "I am a full-stack Web Developer (Shopify / Laravel), having 5+ years of hands-on experience in both front-end designing and back-end development. Familiar with allstages of the development cycle for dynamic web projects.",
+        "photo": "/assets/images/ab-img.webp",
+        "skill_tags": [
+            { "skill": "Laravel" },
+            { "skill": "Core PHP" },
+            { "skill": "MySQL" },
+            { "skill": "Shopify" },
+            { "skill": "Wordpress" },
+            { "skill": "Vue Js" },
+            { "skill": "Alpine Js" },
+            { "skill": "Bootstrap" },
+            { "skill": "AWS Console" },
+            { "skill": "Linux Servers" },
+            { "skill": "WHM & cPanel" },
+            { "skill": "CyberPanel" },
+            { "skill": "aaPanel" }
+        ],
+        "cv_link": "/assets/files/CV_A.I.HRIDOY.pdf",
+        "services": [
+            {
+                "delay": "0.3s",
+                "icon": "fas fa-code purple-color",
+                "title": "Web Frontend Development",
+                "description": "Creating beautiful websites with responsive user interfaces and stunning designs using HTML, CSS, Bootstrap, and Vue.js. Designing and developing front-end solutions that deliver a great user experience."
+            },
+            {
+                "delay": "0.3s",
+                "icon": "fab fa-laravel iron-color",
+                "title": "Web Backend Development",
+                "description": "Building Smart and Stunning Websites from big to small with dynamic features and functionalities using PHP and Laravel. Also ensuring the necessary optimizations for performance and reliability to deliver seamless experience"
+            },
+            {
+                "delay": "0.3s",
+                "icon": "fas fa-object-ungroup yellow-color",
+                "title": "Web Application Development",
+                "description": "Crafting impactful and functional web applications and software using PHP, Laravel, and MySQL. Utilizing best practices for optimal performance and scalability to provide a seamless user experience."
+            },
+            {
+                "delay": "0.7s",
+                "icon": "fab fa-wordpress sky-color",
+                "title": "Wordpress",
+                "description": "Crafting bespoke WordPress websites with custom themes and plugins to cater to your specific requirements and needs. From design to deployment, ensuring seamless performance and user experience."
+            },
+            {
+                "delay": "0.7s",
+                "icon": "fab fa-shopify green-color",
+                "title": "Shopify",
+                "description": "Building Shopify stores with custom themes and custom apps to meet your specific requirements. From design to development, ensuring seamless performance and user experience."
+            },
+            {
+                "delay": "0.7s",
+                "icon": "fas fa-server purple-color",
+                "title": "Server Management",
+                "description": "Expert in managing Linux servers via SSH and also using CPanel & WHM. Proficient in deploying, configuring, manageing database and maintaining servers to ensure optimal performance, security, and reliability."
+            }
+        ]
+    },
     "skills": [
         {
             "PSkills": [

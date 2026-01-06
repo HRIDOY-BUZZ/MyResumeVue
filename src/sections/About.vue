@@ -2,7 +2,12 @@
 import { inject } from 'vue';
 import Services from '../sections/Services.vue';
 
-const skills = inject('aboutData');
+const about = inject('aboutData');
+const name = about.value.name;
+const photo = about.value.photo;
+const description = about.value.description;
+const skills = about.value.skill_tags;
+const cv = about.value.cv_link;
 </script>
 
 <template>
@@ -11,16 +16,14 @@ const skills = inject('aboutData');
             <div class="row section-separator">
                 <div class="col-sm-12 col-md-6">
                     <div class="hb-about-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                        <img src="/assets/images/ab-img.webp" alt="Al-Amin Islam Hridoy" class="img-fluid" loading="lazy">
+                        <img :src="photo" :alt="name" class="img-fluid" loading="lazy">
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6">
                     <div class="hb-about-inner">
                         <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">About Me</h2>
                         <p class="wow fadeInUp text-justified" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                            I am a full-stack Web Developer (Shopify / Laravel), having 4+ years of hands-on
-                            experience in both front-end designing and back-end development. Familiar with all
-                            stages of the development cycle for dynamic web projects.
+                            {{ description }}
                         </p>
                         <div class="hb-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                             <ul>
@@ -29,8 +32,8 @@ const skills = inject('aboutData');
                                 </li>
                             </ul>
                         </div>
-                        <a href="/assets/files/CV_Al-Amin_Islam_Hridoy.pdf" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                            Downlaod CV <i class="fa fa-download"></i>
+                        <a :href="cv" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s" target="_blank">
+                            Download CV <i class="fa fa-download"></i>
                         </a>
                     </div>
                 </div>
