@@ -1,25 +1,58 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import { useRoute, RouterLink } from 'vue-router';
 
 const isMenuOpen = ref(false);
-const route = useRoute();
 const isScrolled = ref(false);
+const activeSection = ref('hb-home');
+
+const sections = ['hb-home', 'hb-about', 'hb-services', 'hb-skills', 'hb-interests', 'hb-education', 'hb-experience', 'hb-contact'];
 
 const toggleMenu = () => {
     isMenuOpen.value = !isMenuOpen.value;
 };
 
-const isCurrentPage = (path) => {
-    return route.path === path;
+const scrollToSection = (id) => {
+    isMenuOpen.value = false;
+    const element = document.getElementById(id);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
 };
 
 const handleScroll = () => {
     isScrolled.value = window.scrollY >= 50;
+
+    // Check if we are at the very bottom of the page
+    if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 20) {
+        activeSection.value = 'hb-contact';
+        return;
+    }
+
+    let currentSection = 'hb-home';
+    for (const sectionId of sections) {
+        const el = document.getElementById(sectionId);
+        if (el) {
+            const rect = el.getBoundingClientRect();
+            // Use 150px offset to account for fixed navbar height and padding
+            if (rect.top <= 150 && rect.bottom > 150) {
+                currentSection = sectionId;
+                break;
+            }
+        }
+    }
+
+    // Highlight "About Me" when viewing Services
+    if (currentSection === 'hb-services') {
+        activeSection.value = 'hb-about';
+    } else {
+        activeSection.value = currentSection;
+    }
 };
 
 onMounted(() => {
     window.addEventListener('scroll', handleScroll);
+    // Initial active section calculation after components are loaded
+    setTimeout(handleScroll, 100);
 });
 
 onUnmounted(() => {
@@ -39,28 +72,28 @@ onUnmounted(() => {
         
                     <div class="collapse navbar-collapse" :class="{ active: isMenuOpen }" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto ml-auto">
-                            <li class="nav-item" :class="{ active: isCurrentPage('/') }">
-                                <router-link to="/" @click="toggleMenu" class="nav-link">
+                            <li class="nav-item" :class="{ active: activeSection === 'hb-home' }">
+                                <a href="#hb-home" @click.prevent="scrollToSection('hb-home')" class="nav-link">
                                     <i class="fas fa-house-user"></i> Home
-                                </router-link>
+                                </a>
                             </li>
-                            <li class="nav-item" :class="{ active: isCurrentPage('/about') }">
-                                <router-link to="/about" @click="toggleMenu" class="nav-link">About Me</router-link>
+                            <li class="nav-item" :class="{ active: activeSection === 'hb-about' }">
+                                <a href="#hb-about" @click.prevent="scrollToSection('hb-about')" class="nav-link">About Me</a>
                             </li>
-                            <li class="nav-item" :class="{ active: isCurrentPage('/skills') }">
-                                <router-link to="/skills" @click="toggleMenu" class="nav-link">Skills and Abilities</router-link>
+                            <li class="nav-item" :class="{ active: activeSection === 'hb-skills' }">
+                                <a href="#hb-skills" @click.prevent="scrollToSection('hb-skills')" class="nav-link">Skills and Abilities</a>
                             </li>
-                            <li class="nav-item" :class="{ active: isCurrentPage('/interests') }">
-                                <router-link to="/interests" @click="toggleMenu" class="nav-link">Personal Interests</router-link>
+                            <li class="nav-item" :class="{ active: activeSection === 'hb-interests' }">
+                                <a href="#hb-interests" @click.prevent="scrollToSection('hb-interests')" class="nav-link">Personal Interests</a>
                             </li>
-                            <li class="nav-item" :class="{ active: isCurrentPage('/education') }">
-                                <router-link to="/education" @click="toggleMenu" class="nav-link">Education</router-link>
+                            <li class="nav-item" :class="{ active: activeSection === 'hb-education' }">
+                                <a href="#hb-education" @click.prevent="scrollToSection('hb-education')" class="nav-link">Education</a>
                             </li>
-                            <li class="nav-item" :class="{ active: isCurrentPage('/experiences') }">
-                                <router-link to="/experiences" @click="toggleMenu" class="nav-link">Professional Experiences</router-link>
+                            <li class="nav-item" :class="{ active: activeSection === 'hb-experience' }">
+                                <a href="#hb-experience" @click.prevent="scrollToSection('hb-experience')" class="nav-link">Professional Experiences</a>
                             </li>
-                            <li class="nav-item" :class="{ active: isCurrentPage('/contact') }">
-                                <router-link to="/contact" @click="toggleMenu" class="nav-link">Contact Me</router-link>
+                            <li class="nav-item" :class="{ active: activeSection === 'hb-contact' }">
+                                <a href="#hb-contact" @click.prevent="scrollToSection('hb-contact')" class="nav-link">Contact Me</a>
                             </li>
                         </ul>
                     </div>

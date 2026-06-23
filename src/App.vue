@@ -64,6 +64,10 @@ onMounted(async () => {
 </template>
 
 <style>
+  html {
+    scroll-behavior: smooth;
+  }
+
   #app {
     display: flex;
     flex-direction: column;

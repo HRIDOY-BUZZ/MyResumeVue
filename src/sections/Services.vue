@@ -5,7 +5,7 @@ const services = inject('aboutData').value.services;
 </script>
 
 <template>
-    <main class="hb-service">
+    <main class="hb-service" id="hb-services">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">

@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted, inject } from 'vue';
-import MasonryWall from '@yeger/vue-masonry-wall';
+import { MasonryWall } from '@yeger/vue-masonry-wall';
 
 const experiences = inject('experiencesData');
 const windowWidth = ref(window.innerWidth);

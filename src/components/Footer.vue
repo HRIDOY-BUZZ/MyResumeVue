@@ -1,16 +1,10 @@
 <script setup>
 import { ref, inject } from 'vue';
-import { useRoute } from 'vue-router';
 
 const year = ref(new Date().getFullYear());
-const route = useRoute();
 
 const homeData = inject('homeData');
 const socialData = inject('socialData');
-
-const isCurrentPage = (path) => {
-    return route.path === path;
-};
 </script>
 
 <template>
@@ -25,7 +19,7 @@ const isCurrentPage = (path) => {
                                     <p>Copyright <i class="far fa-copyright"></i> {{ year }} <a href="#"> {{ homeData.name }}</a></p>
                                 </div>
                             </div>
-                            <div v-if="!isCurrentPage('/')" class="col-sm-6 text-center">
+                            <div class="col-sm-6 text-center">
                                 <ul class="social-icon">
                                     <li>
                                         <a :href="socialData.facebook">
