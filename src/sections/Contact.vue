@@ -1,7 +1,8 @@
 <script setup>
 import { ref } from 'vue';
-import axios from 'axios';
+import { inject } from 'vue';
 import { HollowDotsSpinner } from 'epic-spinners';
+import { fetchIpAddress, postContactForm } from '../services/contact.js';
 
 const firstName = ref('');
 const lastName = ref('');
@@ -9,20 +10,18 @@ const email = ref('');
 const messageText = ref('');
 const message = ref('');
 const loading = ref(false);
-
-const getUserData = async () => {
-    try {
-        const response = await axios.get('https://api.ipify.org?format=json');
-        return response.data.ip;
-    } catch (error) {
-        console.error(error);
-        throw new Error('Failed to fetch IP address');
-    }
-};
+const homeData = inject('homeData');
 
 const submitForm = async () => {
     loading.value = true;
-    const ip = await getUserData();
+    
+    let ip = '';
+    try {
+        ip = await fetchIpAddress();
+    } catch (e) {
+        console.error('IP fetch failed, sending blank IP:', e);
+    }
+    
     const formData = {
         firstName: firstName.value,
         lastName: lastName.value,
@@ -30,25 +29,13 @@ const submitForm = async () => {
         message: messageText.value,
         ip,
     };
+    
     try {
-        const response = await fetch('https://api.hridoybuzz.me/resume/submit.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        });
-        console.log(JSON.stringify(formData));
-
-        if (response.ok) {
-            const responseMessage = await response.text();
-            message.value = responseMessage;
-        } else {
-            message.value = 'There was a problem submitting your message. Please try again.';
-        }
+        const responseMessage = await postContactForm(formData);
+        message.value = responseMessage;
     } catch (error) {
         console.error(error);
-        message.value = 'There was a problem submitting your message. Please try again.2';
+        message.value = 'There was a problem submitting your message. Please try again.';
     }
 
     // Clear form fields
@@ -83,7 +70,7 @@ const submitForm = async () => {
                                     color="#FFFFFF"
                                 />
                             </div>
-                            <div v-else id="msgSubmit" class="h3 text-center hidden">
+                            <div v-else-if="message" id="msgSubmit" class="h3 text-center">
                                 {{ message }}
                             </div>
                             <div class="row">
@@ -120,7 +107,7 @@ const submitForm = async () => {
                                     <div class="each-info">
                                         <h4>Address</h4>
                                         <address>
-                                            Cardiff, United Kingdom
+                                            {{ homeData.address }}
                                         </address>
                                     </div>
                                 </div>
@@ -132,7 +119,7 @@ const submitForm = async () => {
                                     </div>
                                     <div class="each-info">
                                         <h4>Email</h4>
-                                        <a href="mailto:hridoy.usw25@gmail.com">hridoy.usw25@gmail.com</a><br>
+                                        <a :href="'mailto:' + homeData.email">{{ homeData.email }}</a><br>
                                     </div>
                                 </div>
                             </div>

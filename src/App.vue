@@ -1,6 +1,5 @@
 <script setup>
 import { ref, onMounted, provide } from 'vue';
-import axios from 'axios';
 import Header from './components/Header.vue';
 import Body from './components/Body.vue';
 import Footer from './components/Footer.vue';
@@ -28,8 +27,11 @@ provide('educationData', educationData);
 
 onMounted(async () => {
     try {
-        const response = await axios.get('/data/data.json');
-        const data = response.data;
+        const response = await fetch('/data/data.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
         homeData.value = data.home;
         socialData.value = data.social;
         aboutData.value = data.about;
