@@ -12,8 +12,8 @@ import Contact from '../sections/Contact.vue';
     <Home />
     <About />
     <Skills />
-    <Interests />
-    <Education />
     <Experiences />
+    <Education />
+    <Interests />
     <Contact />
 </template>

@@ -33,7 +33,12 @@ onUnmounted(() => {
                                         <div class="hb-experience-deatils">
                                             <!-- Workplace-->
                                             <div class="hb-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                                                <h4>{{ item.designation }} @ <a :href="item.URL">{{ item.company }}</a></h4>
+                                                <h4>
+                                                    {{ item.designation }}
+                                                    <span v-if="item['part-time']" class="badge rounded-pill bg-warning text-dark">Part-time</span>
+                                                    <br>
+                                                    @ <a :href="item.URL">{{ item.company }}</a>
+                                                </h4>
                                                 <ul class="company-location">
                                                     <li v-for="li in item.location" :key="li">
                                                         {{ li }}

@@ -25,7 +25,7 @@ const TSkills = computed(() => skillsData.value.TSkills || []);
                                         <div class="parcial">
                                             <div class="info">
                                                 <div class="nome">{{ skill.name }}</div>
-                                                <div class="percentagem-num">{{ skill.percent }}%</div>
+                                                <!-- <div class="percentagem-num">{{ skill.percent }}%</div> -->
                                             </div>
                                             <div class="progressBar">
                                                 <div class="percentagem" :style="{ width: skill.percent + '%' }"></div>
@@ -69,20 +69,21 @@ const TSkills = computed(() => skillsData.value.TSkills || []);
                     <div class="col-12">
                         <div class="hb-professional-skills wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
                             <ul class="hb-professional-progress">
-                                <li v-for="skill in PSkills" :key="skill.id">
+                                <li v-for="skill in PSkills" :key="skill.id" class="position-relative">
                                     <circle-progress
                                     :size="100"
-                                    :percent="skill.percent"
+                                    :percent="100"
                                     :fill-color="'#0bceaf'"
                                     :empty-color="'#333333'"
                                     :border-width="6"
                                     :border-bg-width="6"
                                     :transition="2000"
-                                    :show-percent="true"
+                                    :show-percent="false"
                                     :viewport="true"
                                     :class="'hb-progress hb-progress-circle'"
                                     >
                                     </circle-progress>
+                                    <i :class="skill.icon" class="circle-center-icon"></i>
                                     <div class="pr-skill-name">{{ skill.name }}</div>
                                 </li>
                             </ul>
@@ -94,5 +95,12 @@ const TSkills = computed(() => skillsData.value.TSkills || []);
 </template>
 
 <style scoped>
-
+    .circle-center-icon {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        color: #0bceaf;
+    }
 </style>

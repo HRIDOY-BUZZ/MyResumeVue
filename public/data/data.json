@@ -17,16 +17,18 @@
     },
     "about": {
         "name": "Al-Amin Islam Hridoy",
-        "description": "I am a full-stack Web Developer (Shopify / Laravel), having 5+ years of hands-on experience in both front-end designing and back-end development. Familiar with allstages of the development cycle for dynamic web projects.",
+        "description": "Full-stack Web Developer (Shopify / Laravel) with over 5 years of hands-on experience in front-end development and back-end architecture. Proven ability to manage the complete development lifecycle to deliver secure, dynamic web projects.",
         "photo": "/assets/images/ab-img.webp",
         "skill_tags": [
             { "skill": "Laravel" },
             { "skill": "Core PHP" },
             { "skill": "MySQL" },
+            { "skill": "SQLite" },
             { "skill": "Shopify" },
             { "skill": "Wordpress" },
             { "skill": "Vue Js" },
             { "skill": "Alpine Js" },
+            { "skill": "Vanilla Js" },
             { "skill": "Bootstrap" },
             { "skill": "AWS Console" },
             { "skill": "Linux Servers" },
@@ -56,15 +58,15 @@
             },
             {
                 "delay": "0.7s",
-                "icon": "fab fa-wordpress sky-color",
-                "title": "Wordpress",
-                "description": "Crafting bespoke WordPress websites with custom themes and plugins to cater to your specific requirements and needs. From design to deployment, ensuring seamless performance and user experience."
-            },
-            {
-                "delay": "0.7s",
                 "icon": "fab fa-shopify green-color",
                 "title": "Shopify",
                 "description": "Building Shopify stores with custom themes and custom apps to meet your specific requirements. From design to development, ensuring seamless performance and user experience."
+            },
+            {
+                "delay": "0.7s",
+                "icon": "fab fa-wordpress sky-color",
+                "title": "Wordpress",
+                "description": "Crafting bespoke WordPress websites with custom themes and plugins to cater to your specific requirements and needs. From design to deployment, ensuring seamless performance and user experience."
             },
             {
                 "delay": "0.7s",
@@ -77,28 +79,28 @@
     "skills": [
         {
             "PSkills": [
-                { "id": 1, "name": "Communication", "percent": 93 },
-                { "id": 2, "name": "Team Work", "percent": 85 },
-                { "id": 3, "name": "Project Management", "percent": 88 },
-                { "id": 4, "name": "Creativity", "percent": 90 }
+                { "id": 1, "name": "Communication", "percent": 93, "icon": "fas fa-comments" },
+                { "id": 2, "name": "Team Work", "percent": 85, "icon": "fas fa-users" },
+                { "id": 3, "name": "Project Management", "percent": 88, "icon": "fas fa-tasks" },
+                { "id": 4, "name": "Creativity", "percent": 90, "icon": "fas fa-lightbulb" }
             ],
             "TSkills": [
-                { "id": 4, "name": "Shopify Liquid", "percent": 78 },
-                { "id": 4, "name": "Shopify Apps", "percent": 77 },
-                { "id": 1, "name": "Laravel", "percent": 77 },
-                { "id": 2, "name": "PHP", "percent": 86 },
-                { "id": 3, "name": "MySQL", "percent": 82 },
-                { "id": 3, "name": "API (REST/GraphQL)", "percent": 80 },
-                { "id": 5, "name": "WordPress", "percent": 70 },
-                { "id": 5, "name": "WP Plugins", "percent": 65 },
-                { "id": 6, "name": "Vue.Js", "percent": 55 },
-                { "id": 8, "name": "Alpine Js", "percent": 70 },
-                { "id": 7, "name": "Vanilla Javascript", "percent": 75 },
+                { "id": 4, "name": "Shopify Liquid", "percent": 80 },
+                { "id": 4, "name": "Shopify Apps", "percent": 80 },
+                { "id": 1, "name": "Laravel", "percent": 89 },
+                { "id": 2, "name": "PHP", "percent": 90 },
+                { "id": 3, "name": "MySQL", "percent": 86 },
+                { "id": 3, "name": "API (REST/GraphQL)", "percent": 83 },
+                { "id": 5, "name": "WordPress", "percent": 75 },
+                { "id": 5, "name": "WP Plugins", "percent": 68 },
+                { "id": 6, "name": "Vue.Js", "percent": 69 },
+                { "id": 8, "name": "Alpine Js", "percent": 75 },
+                { "id": 7, "name": "Vanilla Javascript", "percent": 80 },
                 { "id": 9, "name": "CSS / Bootstrap", "percent": 88 },
                 { "id": 10, "name": "C / C++", "percent": 88 },
-                { "id": 11, "name": "C#", "percent": 47 },
-                { "id": 12, "name": "Java", "percent": 55 },
-                { "id": 13, "name": "Python", "percent": 45 },
+                { "id": 11, "name": "C#", "percent": 55 },
+                { "id": 12, "name": "Java", "percent": 60 },
+                { "id": 13, "name": "Python", "percent": 68 },
                 { "id": 14, "name": "Linux", "percent": 81 },
                 { "id": 15, "name": "AWS", "percent": 70 }
             ],
@@ -106,7 +108,7 @@
                 { "id": 1, "name": "Adobe Photoshop", "percent": 79 },
                 { "id": 2, "name": "Adobe Illustrator", "percent": 50 },
                 { "id": 3, "name": "Canva", "percent": 71 },
-                { "id": 4, "name": "GIMP", "percent": 58 },
+                { "id": 4, "name": "Affinity", "percent": 58 },
                 { "id": 5, "name": "Arduino", "percent": 60 },
                 { "id": 6, "name": "Proteus", "percent": 57 }
             ]
@@ -153,51 +155,40 @@
             "institutionUrl": "https://ewubd.edu/",
             "department": "Department of Computer Science and Engineering",
             "year": "2016 - 2020",
-            "campus": ["A/2, Jahurul Islam Avenue, Jahurul Islam City, Aftabnagar, Dhaka-1212, Bangladesh"]
-        },
-        {
-            "degree": "Higher Secondary School Certificate (HSC)",
-            "institution": "Govt. Science College (Dhaka Board)",
-            "institutionUrl": "http://gsctd.edu.bd/en/",
-            "department": "Group: Science",
-            "year": "2013 - 2015",
-            "campus": ["34/B Farmgate - Tejturi Bazar Rd, Tejgaon, Dhaka-1215, Bangladesh"]
-        },
-        {
-            "degree": "Secondary School Certificate (SSC)",
-            "institution": "Motijheel Model School & College (Dhaka Board)",
-            "institutionUrl": "https://www.motijheelmodelschoolandcollege.edu.bd/",
-            "department": "Group: Science",
-            "year": "2011 - 2013",
-            "campus": [
-                "Kamalapur Road, Motijheel, Dhaka-1000, Bangladesh",
-                "Atish Dipankar Road, Bashabo, Shabujbag, Dhaka-1214, Bangladesh"
-            ]
-        },
-        {
-            "degree": "Junior School Certificate (JSC)",
-            "institution": "Motijheel Model School & College (Dhaka Board)",
-            "institutionUrl": "https://www.motijheelmodelschoolandcollege.edu.bd/",
-            "year": "2010",
-            "campus": [
-                "Kamalapur Road, Motijheel, Dhaka-1000, Bangladesh",
-                "Atish Dipankar Road, Bashabo, Shabujbag, Dhaka-1214, Bangladesh"
-            ]
+            "campus": ["Aftabnagar, Dhaka-1212, Bangladesh"]
         }
     ],
     "experiences": [
+        {
+            "id": 0,
+            "designation": "Web Developer and Digital Marketing Coordinator",
+            "company":"TQS Business Solutions Ltd.",
+            "URL": "https://tqsbusinesssolutions.co.uk/",
+            "location": [
+                "22 Ninian Park, Cardiff, CF11 6JA, UK."
+            ],
+            "part-time": true,
+            "duration": "April 2026 - Present (Running)",
+            "responsibilities": [
+                "Building custom websites and web applications using Laravel/PHP",
+                "Managing Linux VPS environments and ensuring security and performance of web applications",
+                "Directing organic content and paid ad campaigns across Facebook and Instagram to generate leads.",
+                "Improving local search rankings through on-page SEO and designed digital branding assets."
+            ]
+        },
         {
             "id": 1,
             "designation": "Full-stack Software Engineer",
             "company":"EchoLogyx Ltd.",
             "URL": "https://echologyx.com/",
             "location": [
-                "110-112 Parkway, London, UK.",
-                "Westlake, Miami, FL, USA.",
+                "Parkway, Camden, London, NW1 7AN, UK.",
+                "Orchard Drive, Westlake, FL 33470, USA.",
                 "Uttara, Dhaka, Bangladesh.",
                 "Dhanmondi, Dhaka Bangladesh.",
                 "Muradpur, Chattagram, Bangladesh."
             ],
+            "part-time": false,
             "duration": "December 2023 - September 2025",
             "responsibilities": [
                 "Shopify Theme Development (Liquid)",
@@ -210,11 +201,12 @@
         },
         {
             "id": 2,
-            "designation": "Project Manager (Part-time)",
+            "designation": "Project Manager",
             "company":"eBuzz-IT",
             "URL": "https://ebuzz-it.com/",
             "location": ["(Online / Remote)"],
             "duration": "October 2021 - Present",
+            "part-time": true,
             "responsibilities": [
                 "Project Planning and Estimations",
                 "Project Workflow Management",
@@ -222,7 +214,7 @@
                 "Git Repositories Management (Github)",
                 "Database Management (MySQL)",
                 "Bug Fixes and Support for both Front-end and Backend Functionalities",
-                "Web Server Management (CPanel)"
+                "Web Server Management (VPS - Ubuntu)"
             ]
         },
         {
@@ -234,6 +226,7 @@
                 "Sydney, NSW, Australia.",
                 "Kallyanpur, Dhaka, Bangladesh"
             ],
+            "part-time": false,
             "duration": "August 2021 - November 2023",
             "responsibilities": [
                 "Web Back-end Development (Laravel, PHP, MySQL)",
@@ -245,10 +238,11 @@
         },
         {
             "id": 4,
-            "designation": "Web Back-end Developer (Part-time)",
+            "designation": "Web Back-end Developer",
             "company":"BMS Systems",
             "URL": "https://bmssystems.org/",
             "location": ["(Online / Remote)"],
+            "part-time": true,
             "duration": "June 2021 - December 2021",
             "responsibilities": [
                 "Web Back-end Development (Laravel, MySQL)",
@@ -267,6 +261,7 @@
                 "Niketan, Gulshan-1, Dhaka, Bangladesh",
                 "Aftabnagar, Rampura, Dhaka, Bangladesh"
             ],
+            "part-time": false,
             "duration": "January 2021 - July 2021",
             "responsibilities": [
                 "Web Front-end Development (Bootstrap, JavaScript)",
@@ -274,24 +269,6 @@
                 "CSM Website Development (WordPress/WooCommerce)",
                 "Web Server Management (WHM & cPanel)",
                 "Project Management"
-            ]
-        },
-        {
-            "id": 6,
-            "designation": "Campus Ambassador",
-            "company":"Creative It Institute",
-            "URL": "https://creativeitinstitute.com/",
-            "location": [
-                "Momtaz Plaza, Dhanmondi, Dhaka, Bangladesh",
-                "Meher Plaza, Dhanmondi, Dhaka, Bangladesh",
-                "Azampur Bus Stand, Uttara, Dhaka, Bangladesh",
-                "Chawk Bazar, Chattogram, Bangladesh"
-            ],
-            "duration": "January 2020 - January 2021",
-            "responsibilities": [
-                "Let everyone know about the importance and benefits of IT courses",
-                "Let everyone know about the Latest course offers",
-                "Attending Free sessions and Demo classes"
             ]
         }
     ],
