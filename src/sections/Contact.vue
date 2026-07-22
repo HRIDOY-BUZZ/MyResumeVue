@@ -35,7 +35,7 @@ const submitForm = async () => {
         message.value = responseMessage;
     } catch (error) {
         console.error(error);
-        message.value = 'There was a problem submitting your message. Please try again.';
+        message.value = 'There was a problem submitting your message. Please try again after a while or try a different method of contact.';
     }
 
     // Clear form fields
