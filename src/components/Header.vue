@@ -83,15 +83,17 @@ onUnmounted(() => {
                             <li class="nav-item" :class="{ active: activeSection === 'hb-skills' }">
                                 <a href="#hb-skills" @click.prevent="scrollToSection('hb-skills')" class="nav-link">Skills and Abilities</a>
                             </li>
-                            <li class="nav-item" :class="{ active: activeSection === 'hb-interests' }">
-                                <a href="#hb-interests" @click.prevent="scrollToSection('hb-interests')" class="nav-link">Personal Interests</a>
+                            <li class="nav-item" :class="{ active: activeSection === 'hb-experience' }">
+                                <a href="#hb-experience" @click.prevent="scrollToSection('hb-experience')" class="nav-link">Professional Experiences</a>
                             </li>
                             <li class="nav-item" :class="{ active: activeSection === 'hb-education' }">
                                 <a href="#hb-education" @click.prevent="scrollToSection('hb-education')" class="nav-link">Education</a>
                             </li>
-                            <li class="nav-item" :class="{ active: activeSection === 'hb-experience' }">
-                                <a href="#hb-experience" @click.prevent="scrollToSection('hb-experience')" class="nav-link">Professional Experiences</a>
-                            </li>
+                            <!-- <li class="nav-item" :class="{ active: activeSection === 'hb-interests' }">
+                                <a href="#hb-interests" @click.prevent="scrollToSection('hb-interests')" class="nav-link">Personal Interests</a>
+                            </li> -->
+                            
+                            
                             <li class="nav-item" :class="{ active: activeSection === 'hb-contact' }">
                                 <a href="#hb-contact" @click.prevent="scrollToSection('hb-contact')" class="nav-link">Contact Me</a>
                             </li>
